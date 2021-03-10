@@ -12,6 +12,7 @@ award gold,totale Anzahl,Anzahl der Gold Auszeichnungen für den Künstler oder 
 award platin,totale Anzahl,Anzahl der Platin Auszeichnungen für den Künstler oder das Label im Jahr 2020,https://www.musikindustrie.de/markt-bestseller/gold-/platin-und-diamond-auszeichnung/datenbank////#topSearch
 award diamond,totale Anzahl,Anzahl der Diamond Auszeichnungen für den Künstler oder das Label im Jahr 2020,https://www.musikindustrie.de/markt-bestseller/gold-/platin-und-diamond-auszeichnung/datenbank////#topSearch
 fans,1=0 bis 100.000 2=100.001 bis 500.000 3=500.001 bis 1.000.000 4= 1.000.001 bis 2.000.000 5= alles höher als 2.000.000,definiert die Anzahl der Follower des Künstlers/Labels auf Instagram (gemessen im Februar 2021),https://www.instagram.com/
+contract,1=Sony 2=Warner 3=Universal 4=keine Zuordnung zu Majorlabel,definiert bei welchem Majorlabel ein Künstler direkt oder indirekt unter Vertrag steht,
 edgelist,,Grundregel: Die Edgelist darf pro Spalte immer nur einen Wert enthalten. Bis auf die ID idealerweise numerisch codiert (als Zahl).,
 from,ID des Senders,definiert den Sender in ungerichteten Netzwerken. Entspricht ID in der Nodelist. Keine Sonderzeichen.,
 to ,ID des Empfängers,definiert den Empfänger in ungerichteten Netzwerken. Entspricht ID in der Nodelist. Keine Sonderzeichen.,
