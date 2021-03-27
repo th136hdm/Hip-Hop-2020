@@ -13,7 +13,6 @@ Bon,Str,4,3
 Bon,Uni,5,1
 Bon,Aka,1,1
 Bon,Max,1,2
-Bon,Kit,1,1
 Aka,Xyr,4,3
 Aka,Uni,5,1
 Aka,Kon,1,2
@@ -26,18 +25,12 @@ Lor,Cap,1,2
 Lor,Cel,1,1
 Jam,Lif,3,3
 Jam,Gro,4,2
-Jam,Kit,1,1
 Jam,Sam,1,2
 Jam,Luc,1,2
 Jam,Foy,1,1
 Jam,Nim,1,1
 Jam,Koo,1,1
 Jam,Cro,1,1
-Kit,Sou,4,3
-Kit,Rin,1,1
-Kit,Cro,1,1
-Kit,Hen,1,1
-Kit,Koo,1,1
 Cap,Bra,3,3
 Cap,Urb,4,2
 Cap,Uni,5,1
