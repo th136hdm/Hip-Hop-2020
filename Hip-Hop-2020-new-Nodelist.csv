@@ -1,0 +1,63 @@
+id,name,sex,type,personalrank,charts,highestrank,awardgold,awardplatin,awarddiamond,fans,contract
+Apa,Apache 207,1,1,1,10,3,7,4,1,4,1
+Bon,Bonez MC,1,1,2,5,21,3,4,0,5,3
+Cap,Capital Bra,1,1,3,5,27,15,6,0,5,3
+Sam,Samra,1,1,4,5,27,11,2,0,4,3
+Juj,Juju,2,1,5,3,24,2,0,0,3,4
+Bau,Bausa,1,1,6,3,38,10,1,0,2,2
+Nim,Nimo,1,1,7,3,52,11,2,0,4,3
+Lor,Loredana,2,1,8,2,24,8,0,0,5,4
+Jam,Jamule,1,1,9,2,25,0,0,0,2,4
+Lea,LEA,2,1,10,2,27,5,2,0,2,1
+Rin,RIN,1,1,11,2,47,0,0,0,3,3
+Kcr,KC Rebell,1,1,12,2,60,3,0,0,4,3
+Sum,Summer Cem,1,1,13,2,62,2,0,0,4,2
+Ufo,Ufo361,1,1,14,1,6,2,2,0,4,4
+Pas,Pashanim,1,1,15,1,12,1,0,0,2,4
+Aka,AK Ausserkontrolle,1,1,16,1,21,1,0,0,3,3
+Max,Maxwell,1,1,17,1,38,3,0,0,4,3
+Jos,Joshi Mizu,1,1,18,1,38,1,0,0,1,4
+Kaf,Kayef,1,1,19,1,42,1,0,0,2,4
+Sid,Sido,1,1,20,1,46,5,1,0,4,3
+Foy,Fourty,1,1,21,1,50,1,0,0,1,4
+Hav,Hava,2,1,22,1,52,1,0,0,3,1
+Hen,Henning May,1,1,23,1,54,0,1,0,3,4
+Clu,Clueso,1,1,24,1,60,0,0,0,2,3
+Luc,Luciano,1,1,25,1,62,5,0,0,4,3
+Cro,Cro,1,1,26,1,64,1,1,0,3,3
+Eli,Elif,2,1,27,1,77,0,0,0,2,3
+Koo,Kool Savas,1,1,28,1,81,0,0,0,2,1
+Ali,Alies,2,1,29,1,81,0,0,0,1,1
+Dar,Dardan,1,1,30,1,83,3,0,0,4,3
+Mon,Monet192,1,1,31,1,83,0,0,0,2,2
+Cel,Celine,2,1,32,1,84,0,0,0,2,4
+Kon,Kontra K,1,1,33,1,94,4,1,0,4,4
+Two,Two Sides,n/a,2,99,11,3,7,4,1,1,1
+Sta,Stay High,n/a,2,99,1,6,2,2,0,n/a,4
+Lif,Life is Pain,n/a,2,99,3,25,1,0,0,1,4
+Tre,Treppenhaus Records,n/a,2,99,2,27,5,2,0,1,1
+Gol,GOLD LEAGUE,n/a,2,99,2,47,0,0,0,1,3
+Ide,385ideal,n/a,2,99,1,52,11,2,0,2,3
+Tru,truwork records,n/a,2,99,1,64,1,1,0,1,3
+Hyp,Hypnotize Entertainment,n/a,2,99,2,62,3,0,0,n/a,3
+Loc,Locosquad,n/a,2,99,1,62,5,0,0,1,3
+Ind,Indipendenza,n/a,2,99,1,38,1,0,0,n/a,4
+Bra,Bra Musik,n/a,2,99,5,27,15,6,0,2,3
+Agg,Aggro Berlin,n/a,2,99,1,46,5,1,0,n/a,3
+Reb,Rebell Army,n/a,2,99,2,60,3,0,0,n/a,3
+Ver,Vertigo Records Berlin,n/a,3,99,1,60,3,0,0,1,3
+Ban,Banger Musik,n/a,3,99,3,60,2,0,0,2,2
+Str,187 Strassenbande,n/a,3,99,6,21,6,4,0,n/a,3
+Jin,Jinx Music,n/a,3,99,3,54,2,0,0,1,4
+Gro,Groove Attack,n/a,3,99,8,6,12,2,0,1,4
+Urb,Urban,n/a,3,99,15,27,51,12,0,n/a,3
+Dow,Downbeat Records,n/a,3,99,3,38,10,1,0,n/a,2
+Kay,Kayef Media,n/a,3,99,1,42,1,0,0,1,4
+Imp,Imperium Music,n/a,3,99,1,52,1,0,0,1,1
+Ess,Essah Media,n/a,3,99,1,81,0,0,0,n/a,1
+Bmg,BMG,n/a,3,99,2,54,4,2,0,1,4
+Fou,Four Music,n/a,3,99,12,3,12,6,1,1,1
+Xyr,XY Records,n/a,3,99,1,21,1,0,0,n/a,3
+Son,Sony Music Germany,n/a,4,99,14,3,13,6,1,1,1
+War,Warner Music Germany,n/a,4,99,7,38,12,1,0,1,2
+Uni,Universal Music Germany,n/a,4,99,20,21,61,16,0,1,3
