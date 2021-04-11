@@ -1,0 +1,1196 @@
+---
+title: "German-Hip-Hop-2020"
+author: "dr083, eh044, ih041, mr195, th136"
+date: "Sommersemester 2021, Abgabe 04. Mai 2021"
+output:
+  pdf_document:
+    toc: yes
+    toc_depth: '3'
+  html_document:
+    df_print: paged
+    toc: yes
+    toc_depth: 3
+    number_sections: yes
+  word_document:
+    toc: yes
+    toc_depth: '3'
+subtitle: "Kooperationen Künstler und Labels in den Top 100 Jahrescharts"
+---
+
+__Abstract und Keywords__
+Wir analysieren die Beziehungsnetzwerke innerhalb eines ungerichteten, two-mode Netzwerks. Wir betrachten die 34 Künstler und 30 Labels der deutschen HipHop Branche, die im Jahr 2020 eine Chartplatzierung in den Top 100 erreichen konnten. Bei der Analyse fokussieren wir uns auf Kooperationen unter den Künstlern und Labels. Zudem gehen wir auf Faktoren wie die Höhe der Chartplatzierung, Anzahl der Fans (gemessen in Instagram-Follower) und Auszeichnungen mit den Messeinheiten Gold, Platin und Diamond ein. Dabei ist das Gesamtnetzwerk bis auf wenige Ausnahmen miteinander vernetzt. Die bestehenden Verbindungen werden einerseits durch die Art der Beziehung definiert. Da die Künstler:innen oft nicht nur bei einem Label unter Vertrag stehen, sondern in ein Netz aus Tochter-, Mutter- und Majorlabels verflochten sind, ergeben sich hier eine Vielzahl an Beziehungsarten. Dabei sind besonders die Majorlabels Sony, Warner und Universal ausschlaggebend für die starke Vernetzung. 
+
+Keywords: Netzwerkanalyse, Musik, HipHop, Kooperationen
+
+# Einleitung
+“Erfolgreicher als die Beatles” - mit dieser Schlagzeile rückt der Rapper Capital Bra 2019 in das Licht der Öffentlichkeit. Mit seinem Track „Wieder Lila“ kletterte er zum 13. Mal an die Spitze der deutschen Charts. Vor etwa 50 Jahren stellte die britische Band rund um John Lennon mit 7 Nummer-Eins-Platzierungen den letzten Rekord auf. Der gebürtige Ukrainer gibt sich bescheiden: “Ich kann mich nicht mit den Beatles vergleichen, das ist eine ganz andere Liga" – die Zahlen sprechen aber eine deutliche Sprache. Auch im letzten Jahr bleibt er als “Meist Gestreamter Künstler in Deutschland” auf der Überholspur. Ein Blick auf die bundesweiten Charts zeigt, dass das kein Einzelfall ist. Hip-Hop in Deutschland boomt. 
+Unabhängig von der Herkunft und Sprache der Künstler, beschreibt „Deutscher Hip-Hop“ die Gesamtheit der Rapmusik, die in Deutschland produziert wurde.  
+Das Genre Hip-Hop fand seinen Ursprung in den 1970er Jahren in der South Bronx von New York und es entstand eine landesweite Szene in den Staaten. In vereinzelten Untergrundbewegungen aus Breakdancer*innen, Sprayer*innen und DJ*anes findet sich die Hip-Hop Musik auf selbstorganisierten Partys in Jugendclubs wieder. In Deutschland gewinnt das Genre in den 1980er an Beliebtheit. Anfangs wurden die unterschiedlichen Trends aus der amerikanischen Szene adaptiert. Aus einer Untergrund-Bewegung wurde dann ein etabliertes Genre und in den1990er wurde Hip-Hop auch in Deutschland populärer. Unter anderem die Stuttgarter Band “Die Fantastischen Vier” sorgte für einen Durchbruch. Zur Jahrtausendwende etablierten sich die neuen Sub-Genres Battle- und Gangster Rap. Hier nahm sich deutscher Hip-Hop die Themen an, die bisher keine Relevanz in der deutschen Popkultur hatten: Die Straße, Drogenhandel, Prostitution, Rassismus, Waffengewalt oder Chancenlosigkeit in der Jugend. Dabei wurden die zu Teilen sexistischen, homophoben, gewaltverharmlosenden und auch antisemitistischen Songtexte kritisiert. Das Anfang der 2000er Jahre durch Berliner Rapper wie Sido und Bushido maßgeblich geprägte Genre wurde zu Beginn noch belächelt. Heute zählt der Hip-Hop zu den beliebtesten und gleichzeitig erfolgreichsten Musikformen in Deutschland.
+Im Folgenden werden die wichtigsten Akteure im deutschen Hip-Hop Netzwerk im Jahr 2020 untersucht. Dabei interessiert uns besonders, ob es zentrale Akteure innerhalb des Netzwerks gibt und inwiefern diese untereinander kooperiert haben. Für das Netzwerk wurden 34 Künstler und 30 Labels aus dem deutschen Hip Hop, die 2020 in der Liste der Top 100 MTV Jahrescharts aufgelistet wurden, herausgefiltert. Auf der Beziehungsebene interessiert uns, wer mit wem ein Feature gemacht hat und ob dies von den Labels und vom Erfolg der einzelnen Künstler abhängig ist. 
+
+# Vorarbeiten und vergleichbare Studien
+## Forschungsstand
+Bisher gab es keine vergleichbare Studien oder Forschungen zu Verknüpfungen der Künstler aus dem deutschen Hip Hop.
+
+## Arbeitshypothesen
+Wir gehen von folgenden Arbeitshypothesen aus:
+a) Kooperationen Labels: Künstler die beim gleichen Label sind, kooperieren eher miteinander als Künstler, die bei verschiedenen Labels unter Vertrag stehen.
+b) Die Künstler die am erfolgreichsten sind, sind alle beim gleichen Label unter Vertrag und haben bereits miteinander kooperiert.
+c) Die Künstler sind stark vernetzt.
+
+# Datenerhebung: Zugang, Bereinigung und Codebuch
+
+## Datenzugang
+Die Daten wurden aus verschiedenen Online Musik Quellen erhoben.
+Basis ist die MTV Top 100 Jahrescharts 2020: (Herausgefiltert wurden alle deutschen Hip-Hop Künstler): http://www.mtv.de/charts/lod2k0/top-100-jahrescharts-2020
+Die Auszeichnungen konnten der folgenden Quelle entnommen werden: https://www.musikindustrie.de/markt-bestseller/gold-/platin-und-diamond-auszeichnung/datenbank////#topSearch
+Die Follower Zahlen wurden im Februar 2021 auf Instagram abgelesen.
+
+## Datensatz
+Der Datensatz ist unter [Github](https://github.com/timonhe99/Hip-Hop-2020) verfügbar.
+
+## Codebuch
+Das Codebuch (https://github.com/timonhe99/Hip-Hop-2020/blob/main/Hip-Hop-2020-Codebuch.csv) beschreibt die Variablen, Relationen und Gewichte des Netzwerks und ist ebenfalls auf Github hinterlegt.
+
+# Analyse und Interpretation
+
+## Das Gesamtnetzwerk
+Das Gesamtnetzwerk umfasst 64 Knoten und 156 Beziehungen (siehe igraph-Objekt). Es ist ungerichtet und gewichtet.
+
+```{r Gesamtnetzwerk erstellen, echo=FALSE, message=FALSE, warning=TRUE, paged.print=FALSE, fig.high=9, fig.width=16}
+library(tidyverse)
+library(igraph)
+
+# Einlesen der Edge- und Nodelist
+
+el <- read.csv("https://raw.githubusercontent.com/timonhe99/Hip-Hop-2020/main/Hip-Hop-2020-Edgelist.csv", header=T, as.is=T, sep = ",")
+nodes <- read.csv("https://raw.githubusercontent.com/timonhe99/Hip-Hop-2020/main/Hip-Hop-2020-Nodelist-new.csv", header=T, as.is=T, sep = ",")
+
+# Matrix erstellen
+edgematrix <-as.matrix(el)
+
+# Zusammenführen von Edge- und Nodelist als igraph-Objekt
+
+h <- graph_from_data_frame(d=edgematrix, vertices=nodes, directed=F)
+
+
+# Farbliche Unterscheidung der Künstler und Labelformen (1 Künstler, 2 Tochter- 3 Mutter- 4 Majorlabel)
+V(h)[V(h)$type == 1]$color <- "darkseagreen"
+V(h)[V(h)$type == 2]$color <- "lavenderblush"
+V(h)[V(h)$type == 3]$color <- "thistle"
+V(h)[V(h)$type == 4]$color <- "hotpink1"
+
+V(h) [V(h)$type == 1] $shape <- "circle"
+V(h) [V(h)$type == 2] $shape <- "square"
+V(h) [V(h)$type == 3] $shape <- "square"
+V(h) [V(h)$type == 4] $shape <- "square"
+
+plot(h,
+     main="Hip Hop 2020 - Kooperationen Künstler und Labels in den Top 100 Jahrescharts",
+     sub="grün = Künstler*in, rosé = Tochterlabel, lavendel = Mutterlabel, pink = Majorlabel",
+     asp=0,
+     edge.arrow.size=1,
+     edge.width=E(h)$weight,
+     edge.color="grey",
+     vertex.frame.color=NA,
+     vertex.label.color="black",
+     vertex.size=10
+     )
+
+```
+
+```{r Beschreibung des Netzwerks, message=FALSE, warning=FALSE, paged.print=TRUE}
+# Parameter zu Beschreibung des Netzwerks
+
+## ist das Netzwerk bereits vereinfacht?
+is.simple(h)
+
+## besteht das Netzwerk aus Komponenten?
+## wenn ja, wie vielen?
+is.connected(h)
+components(h)
+
+## Dichte des Netzwerks
+edge_density(h, loops=FALSE)
+
+## Umfang des Netzwerks
+diameter(h)
+
+## Pfaddistanzen (Distance)
+farthest_vertices(h)
+```
+Das Hauptnetzwerk besteht aus drei Komponenten mit 59, 1 und 2 Knoten, die nicht miteinander verbunden sind. Die Dichte im Netzwerk beträgt 7,82 Prozent von allen möglichen Verbindungen. Die maximale Pfaddistanz beträgt 11 Schritte.
+
+## Analyse der Teilnetzwerke 
+
+Zur genaueren Betrachtung der Verbindungen im Gesamtnetzwerk, haben wir anhand der Edge- und  Node-Attribute Teilnetzwerke gebildet.
+
+### Teilnetzwerke nach Node-Attributen
+Die Analyse der Teilnetzwerke nach Node-Attributen werden anschließend vorgestellt. Differenziert wird hier unter anderem nach Geschlecht, nach Label Art (Tochter, Mutter, Major), nach Follower-Anzahl, Personalrank oder nach Anzahl der Platzierung eines Künstlers in den Charts. Um herauszufinden inwiefern der Erfolg eine Rolle bei der Vernetzung der Künstler und Labels spielt, untersuchen wir Teilnetzwerke nach Auszeichnungen verschiedener Klasse (Gold, Platin, Diamond). Außerdem - um unsere Forschungsfrage beantworten zu können - wird ein Teilnetzwerk auf die Zugehörigkeit der Künstler zu den Labeln analysiert.
+
+*Teilnetzwerke unterteilt in die Major-Label*
+
+Dieses Teilnetzwerk zeigt die Beziehungen der Künstler und Labels innerhalb der jeweiligen Major Labels und des No Major Labels.  
+
+```{r Teilnetzwerke nach contract, fig.height=4, fig.width=16}
+# legt fest, dass mehrere Netzwerke nebeneinander angezeigt wird
+par(mfrow=c(1,4), mar=c(1,1,1,1))
+
+# Erstellen des Teilnetzwerks von Sony
+Teilnetzwerk_Sony <- induced.subgraph(h, V(h) [contract == "1"])
+
+plot(Teilnetzwerk_Sony, layout=layout_with_fr, #layout=layout_as_star,
+ 	main="Teilnetzwerk Sony",
+ 	asp=0,
+ 	edge.arrow.size=1,
+ 	edge.color="grey",
+ 	vertex.frame.color=NA,
+ 	vertex.color="khaki",
+ 	vertex.label.color="black",
+ 	vertex.size=degree(Teilnetzwerk_Sony, mode="all")*2
+ 	)
+ 	
+ 	# Erstellen des Teilnetzwerks von Warner
+Teilnetzwerk_Warner <- induced.subgraph(h, V(h) [contract == "2"])
+
+plot(Teilnetzwerk_Warner, layout=layout_with_fr, #layout=layout_as_star,
+ 	main="Teilnetzwerk Warner",
+ 	asp=0,
+ 	edge.arrow.size=1,
+ 	edge.color="grey",
+ 	vertex.frame.color=NA,
+ 	vertex.color="tomato",
+ 	vertex.label.color="black",
+ 	vertex.size=degree(Teilnetzwerk_Warner, mode="all")*2
+ 	)
+
+# Erstellen des Teilnetzwerks von Universal
+Teilnetzwerk_Universal <- induced.subgraph(h, V(h) [contract == "3"])
+
+plot(Teilnetzwerk_Universal, layout=layout_with_fr, #layout=layout_as_star,
+ 	main="Teilnetzwerk Universal",
+ 	asp=0,
+ 	edge.arrow.size=1,
+ 	edge.color="grey",
+ 	vertex.frame.color=NA,
+ 	vertex.color="peachpuff",
+ 	vertex.label.color="black",
+ 	vertex.size=degree(Teilnetzwerk_Universal, mode="all")*2
+ 	)
+
+# Erstellen des Teilnetzwerks von No-Major
+Teilnetzwerk_NoMajor <- induced.subgraph(h, V(h) [contract == "4"])
+
+plot(Teilnetzwerk_NoMajor, layout=layout_with_fr, #layout=layout_as_star, 
+ 	main="Teilnetzwerk No-Major",
+ 	asp=0,
+ 	edge.arrow.size=1,
+ 	edge.color="grey",
+ 	vertex.frame.color=NA,
+ 	vertex.color="paleturquoise",
+ 	vertex.label.color="black",
+ 	vertex.size=degree(Teilnetzwerk_NoMajor, mode="all")*2
+ 	)
+```
+
+Das erste ist das Major Label Sony. Ausgehend von diesem Knoten existiert eine Beziehung zu dem Mutterlabel Imperium Music und von dort ausgehend zu dem zugehörigen Künstler Hava. Dieses Mutterlabel und der Künstler unterhalten keine weiteren Beziehungen innerhalb des Major Labels. Alle anderen Knoten in diesem Netzwerk haben mindestens eine Beziehung untereinander. Das Mutterlabel Four Music zum Beispiel kooperiert mit dem Label Treppenhaus Records und somit auch mit der Künstlerin LEA. Des Weiteren pflegt Four Music eine Verbindung zu dem Mutterlabel Two Sides und somit auch mit dem Künstler Apache 207.
+
+Das zweite Teilnetzwerk ist das von Warner Music. Dies ist das kleinste der drei Major Labels und weist somit am wenigsten Beziehungen auf. Verbindungen in diesem Netzwerk bestehen nur zwischen Mutterlabel und dem zugehörigen Künstler. Ausgehend von Warner Music sind das zum einen das Mutterlabel Banger Music zu dem Künstler Summer Cem und zu dem Mutterlabel Downbeat Records und dem zugehörigen Künstler Bausa. Der einzige Knoten, der nur eine Verbindung zu Warner aufweist, ist der Künstler Monet 192.
+
+Das größte der abgebildeten Teilnetzwerke ist das von Universal Music Germany. Universal Music weist in seiner Gesamtheit die meisten Mutter und Tochterlabels als auch Künstler auf. Prägnant ist hier, dass die Künstler und Labels untereinander viele Beziehungen untereinander haben. Schlussfolgernd gibt es in diesem Teilnetzwerk viele Kooperationen. Somit arbeiten diese Labels und Künstler sehr stark miteinander. 
+
+Das letzte Teilnetzwerk ist das der No-Major-Labels. Den größten Knoten weist hier Groove Attack auf, von dem ausgehend wiederum auch die anderen Labels und Künstler Beziehungen aufweisen. Verbindungen zu anderen No-Major-Labels wie Jinx Music bestehen zum Beispiel durch die Verbindung von Loredana und Juju sowie von Juju zu Henning May. Besonders auffällig ist hier, dass der Künstler Pashanim keinerlei Beziehungen aufweist, weder zu anderen Labeld noch zu anderen Künstlern und somit im Gesamten neben Kayef der einzige Künstler ist der keinerlei Kooperation aufweist.
+
+
+*Teilnetzwerks der Künstler mit ihrer Labelzugehörigkeit*
+
+```{r Teilnetzwerk Künstler nach contract, fig.high=9, fig.width=16}
+
+# Teilnetzwerk Künstler
+
+# Erstellen des Teilnetzwerks von Künstlern
+Teilnetzwerk_Kuenstler_Labels <- induced.subgraph(h, V(h) [type == "1"])
+
+# Visualiseren des Teilnetzwerks der Künstler mit ihrer Labelzugehörigkeit
+
+V(Teilnetzwerk_Kuenstler_Labels) [V(Teilnetzwerk_Kuenstler_Labels)$contract == 1] $color <- "khaki"
+V(Teilnetzwerk_Kuenstler_Labels) [V(Teilnetzwerk_Kuenstler_Labels)$contract == 2] $color <- "tomato"
+V(Teilnetzwerk_Kuenstler_Labels) [V(Teilnetzwerk_Kuenstler_Labels)$contract == 3] $color <- "peachpuff"
+V(Teilnetzwerk_Kuenstler_Labels) [V(Teilnetzwerk_Kuenstler_Labels)$contract == 4] $color <- "paleturquoise"
+
+plot(Teilnetzwerk_Kuenstler_Labels, layout=layout_with_fr,
+     main="Teilnetzwerk Künstler",
+     sub="khaki= Sony, tomate = Warner, pfirsisch = Universal, türkis = ohne Vertrag mit Majorlabel",
+     asp=0,
+     edge.width=E(Teilnetzwerk_Kuenstler_Labels)$weight,
+     edge.arrow.size=5,
+     edge.width=E(h)$weight,
+     edge.color="grey",
+     vertex.label.color="black",
+     vertex.frame.color=NA,
+     Vertex.size=5,
+     )
+
+```
+Hier wird ein multiplexes Netzwerk dargestellt, um die Aufteilung der Künstler auf die dazugehörigen Labels übersichtlicher darstellen zu können. Dies bietet sich in diesem Fall an, da die Knoten im Netzwerk verschiedenen Labels besitzen. 
+
+In diesem Teilnetzwerk werden lediglich die Künstler abgebildet und anhand von unterschiedlichen Farben ihren Majorlabels zugeordnet. Dabei steht paleturquoise für Sony Music Germany, tomato für Warner Music, peachpuff für Universal Music Germany und khaki sind die Künstler ohne Vertrag bei einem Majorlabel.
+
+Auffällig in diesem Netzwerk sind die Beziehung zwischen den Künstlern, welche keinen Vertrag bei einem Majorlabel besitzen. Hierzu gehören Celine, Ufo361, Juju, Henning May und Loredana. Ebenfalls speziell sind Pashanim und Kayef, da sie beide zu keinem großen Label gehören und auch nicht mit anderen Künstlern vernetzt sind, jedoch trotz allem Erfolg feiern. Diese versuchen möglicherweise sich gegenseitig zu unterstützen, um den fehlenden Halt des Majorlabels auszugleichen. Die Künstler, die bei Universal Music Germany unter Vertrag stehen, sind am stärksten vernetzt und bringen mehrere Singles gemeinsam heraus. Im Allgemeinen sind jedoch die Künstler gemischt miteinander vernetzt und pflegen ebenfalls Kontakte, welche nicht innerhalb ihres Majorlabels sind.
+Zwei Majorlabels haben jedoch keine Verbindung innerhalb des Teilnetzwerks, dazu gehört khaki und tomato, dem nach Sony und Warner Music, als auch khaki und paleturquoise, das heißt Sony Music und die NoMayor-Kategorie. Dies beweist das Sony weniger bereit dazu ist, sich mit Künstlern einzulassen, welche von einem anderen großen Label stammen.
+
+*Teilnetzwerk nach Personal Rank*
+Bei diesem Netzwerk muss gesagt werden, dass der Fokus hier vor allem auf eigenen Schlussfolgerungen unserer Gruppe liegt. Als wir zu Beginn Die Top Deutsch- Hip Hop Künstler der MTV Liste aufgeführt haben, haben wir einen für uns schlüssigen „Personal Rank“ eingeführt. In der MTV Music Liste an sich sind 100 Künstler, da wir aber nur die deutschen Hip Hop Künstler herausfiltern wollten, haben wir den „Personal Rank“ eingeführt. Dieser listet die herausgefilterten Künstler in den jeweils zutreffenden Rang, bestehend aus: 1. Anzahl der Singles in den Top 100, 2. Höchste Platzierung in den Top 100, 3. Anzahl Auszeichnungen, 4. Anzahl Fans. So hatten wir eine unverfälschte Liste der Deutsch-Hip Hop Künstler, abgeleitet von der Gesamt MTV Top 100 Chartliste.
+
+```{r Teilnetzwerk Künstler nach personalrank, fig.high=9, fig.width=16}
+# funktioniert noch nicht 
+
+# Teilnetzwerk Künstler nach personalrank
+
+#Teilnetzwerk_personalrank <- delete_vertices(h, V(h)[type!=1])
+#Teilnetzwerk_personalrank
+
+Teilnetzwerk_personalrank <- induced.subgraph(h, V(h)[personalrank!="n/a"])
+Teilnetzwerk_personalrank
+
+# Farbenskalen aufrufen
+#library(RColorBrewer)
+#display.brewer.all
+
+# Abstufung von 33 Schritten
+#fine = 33
+
+# personalrank als Funktion aufrufen
+pr <- V(Teilnetzwerk_personalrank)$personalrank
+pr
+ 
+#Farbverlauf festlegen in Orangetönen
+#orange = colorRampPalette(c('yellow','red'))
+ 
+#ranking = orange(fine)[as.numeric(cut(pr, breaks = fine))]
+
+
+plot(Teilnetzwerk_personalrank, layout=layout_with_fr,
+     main="Teilnetzwerk Künstler nach personalrank",
+     sub="nachtragen",
+     asp=0,
+     edge.color="grey",
+     vertex.label.color="black",
+     vertex.frame.color=NA,
+     #vertex.color=ranking,
+     )
+
+```
+Die Künstler:innen haben wir mittels einer eigenen Skalierung in ein persönliches Ranking unterteilt. 
+1. Dabei achten wir erstrangig auf die Anzahl der Singles, die der:die Künstler:in in den Top 100 Jahrescharts platziert hat (charts). 
+2. Fortführend haben wir die höchstplatzierteste Single (highestrank) gewertet. 
+3. Anschließend zählte die Anzahl der Awards in das Personalrank hinein (gold-, platin, diamondawards). 
+4. Sollten Künstler:innen weiterhin gleichauf sein, so haben wir schlussendlich deren Anzahl der Instagram-Follower verglichen, um diese in unserem Personalrank entsprechend einzuordnen (fans).
+
+Apache 207 ist dabei mit zehn Singles in den Top 100 Jahrescharts mit Abstand der erfolgreicchste Künstler.
+
+*Teilnetzwerk nach Charts Platzierung der Künstler*
+Dieses Teilnetzwerk zeigt alle Künstler, der angegebenen Top 100 Charts 2020 der MTV Liste, und wie oft diese in den Charts vertreten sind. Dazu wurden die Künstler wie folgt kategorisiert: Der größte Knoten zeigt den Künstler, der am häufigsten in den Charts vertreten ist und dann wird abgestuft bis zum kleinsten Künstler, der am wenigsten oft vertreten ist. Künstler werden dabei wie angegeben als Kreise dargestellt und das zugehörige Label wird als Quadrat dargestellt. 
+```{r Teilnetzwerke Künstler nach charts, fig.high=9, fig.width=16}
+# Teilnetzwerk Künstler & Label 
+
+# Erstellen des Teilnetzwerks von Künstlern
+Teilnetzwerk_Kuenstler <- induced.subgraph(h, V(h) [type == "1"])
+
+
+# Visualiseren des Teilnetzwerks "Teilnetzwerk Künstler" 
+plot(Teilnetzwerk_Kuenstler, layout=layout_with_fr, 
+     main="Teilnetzwerk Künstler",
+     sub="Die Größe der Knoten ist abhängig von der Anzahl der Singles in den Top 100 Jahrescharts.",
+ 	edge.arrow.size=1,
+ 	edge.width=E(h)$weight,
+ 	edge.color="grey",
+ 	vertex.color="darkseagreen",
+  vertex.label.color="black",
+  vertex.frame.color=NA,
+  #Vertex.size=10,
+  vertex.size=V(Teilnetzwerk_Kuenstler)$charts*5
+     )
+```
+Nach Analyse des Netzwerks wird deutlich, dass Apache 207 den größten Knoten in diesem Teilnetzwerk bildet. Apache 207 ist 10-mal mit verschiedenen Tracks wie „Roller“ oder die Single „Bläulich“ , aus dem Album „Treppenhaus“, in den Charts vertreten. Bis zum nächstkleineren Knoten, den sich Bonez MC, Samra und Capital Bra teilen ist es ein deutlicher Sprung. Die drei genannten Künstler sind jeweils nur 5-mal in den Charts vertreten. Es folgen Knoten wie Juju und Bausa mit 3 Platzierungen. Die übrigen Künstler liegen mit 1-2 Platzierungen in den Charts ziemlich gleich auf. Bei den Labels ist Universal Music der größte Knoten. Also sind alle Künstler, die bei diesem Label unter Vertrag stehen insgesamt am häufigsten vertreten.
+
+*Teilnetzwerk nach Charts Platzierung der Labels*
+
+```{r Teilnetzwerk Labels nach charts, fig.high=9, fig.width=16}
+# Teilnetzwerk Labels 
+
+# Erstellen des Teilnetzwerks von Tochter-, Mutter- und Major-Labels
+Teilnetzwerk_Labels <- induced.subgraph(h, V(h) [type >= "2"])
+
+# Visualiseren des Teilnetzwerks "Teilnetzwerk Labels"
+plot(Teilnetzwerk_Labels, layout=layout_with_fr, 
+     main="Teilnetzwerk Labels",
+      sub="Die Größe der Knoten ist abhängig von der Anzahl der Singles in den Top 100 Jahrescharts.",
+ 	edge.arrow.size=6,
+ 	edge.width=E(h)$weight,
+ 	edge.color="grey",
+  vertex.label.color="black",
+  vertex.frame.color=NA,
+  #Vertex.size=10,
+  vertex.size=V(Teilnetzwerk_Labels)$charts*1.5
+     )
+
+```
+Tochterlabel:
+Auch in dem Teilnetzwerk der Tochterlabel gibt es einen deutlichen Gewinner. Mit 11 Platzierungen in den Charts ist das Tochterlabel TwoSides am
+häufigsten vertreten. Bra Musik folgt mit 5 Platzierungen.
+
+Mutterlabel:
+Bei den Mutterlabels bildet Urban Music mit 15 Platzierungen den stärksten Knoten und ist somit am häufigsten in den Charts vertreten. Dicht gefolgt von Four Music mit 12, Groove Attack mit 8 und 187 Strassenbande mit 6 Platzierungen. Die übrigen Labels sind fast gleichauf mit je 1-3 Platzierungen.
+
+Majorlabel:
+Durch Künstler wie Capital Bra hat Universal Music bei den Major Labels insgesamt am meisten Platzierungen in den Charts und ist somit nach Analyse aller Teilnetzwerke der größte Knoten. Das ist nicht verwunderlich, da die Universal Music Group das größte der drei Majorlabels darstellt und auch am Musikmarkt die meisten Anteile besitzt. Den zweitgrößten Knoten bildet das Musik Label Sony Music, welches im Gesamtvergleich das zweitgrößte Majorlabel der Musikbranche darstellt. Das Schlusslicht bildet Warner Musik. Trotz, dass Warner fast 50 Jahre vor Universal und 30 Jahre vor Sony gegründet wurde, ist es das schwächste der drei Majorlabels.
+
+*Teilnetzwerke Labels getrennt nach Tochter-, Mutter- und Majorlabels*
+
+In diesem Teilnetzwerk sind alle Labels, sowohl die Major, mit den zugehörigen Mutter und Tochterlabels als auch die alleinstehenden No-Major-Labels abgebildet. Es soll aufgezeigt werden welche Labels am häufigsten in den Charts vertreten sind. Die Größe der Knoten ist dabei abhängig von der Anzahl der Singles in den Top 100 Jahrescharts.
+
+```{r Teilnetzwerke Tochter-, Mutter-, Major-Labels nach charts, fig.high=9, fig.width=16}
+# legt fest, dass mehrere Netzwerke nebeneinander angezeigt wird
+par(mfrow=c(1,3), mar=c(1,1,1,1))
+
+# Erstellen des Teilnetzwerks von Tochter-, Mutter-, Major-Label
+Teilnetzwerk_Label_Tochter <- induced.subgraph(h, V(h) [type == "2"])
+Teilnetzwerk_Label_Mutter <- induced.subgraph(h, V(h) [type == "3"])
+Teilnetzwerk_Label_Major <- induced.subgraph(h, V(h) [type == "4"])
+
+# Visualiseren des Teilnetzwerks "Teilnetzwerk Tochter-Label"
+plot(Teilnetzwerk_Label_Tochter, layout=layout_with_fr, 
+     main="Teilnetzwerk Tochter-Label",
+ 	edge.arrow.size=1,
+ 	edge.width=E(h)$weight,
+ 	edge.color="grey",
+ 	vertex.color= "lavenderblush",
+  vertex.label.color="black",
+  vertex.frame.color=NA,
+  vertex.size=V(Teilnetzwerk_Label_Tochter)$charts*5
+     )
+
+# Visualiseren des Teilnetzwerks "Teilnetzwerk Mutter-Label"
+plot(Teilnetzwerk_Label_Mutter, layout=layout_with_fr, 
+     main="Teilnetzwerk Mutter-Label",
+ 	edge.arrow.size=1,
+ 	edge.width=E(h)$weight,
+ 	edge.color="grey",
+ 	vertex.color="thistle",
+  vertex.label.color="black",
+  vertex.frame.color=NA,
+  vertex.size=V(Teilnetzwerk_Label_Mutter)$charts*5
+     )
+
+# Visualiseren des Teilnetzwerks "Teilnetzwerk Major-Label"
+plot(Teilnetzwerk_Label_Major, layout=layout_with_fr, 
+     main="Teilnetzwerk Major-Label",
+ 	edge.arrow.size=1,
+ 	edge.width=E(h)$weight,
+ 	edge.color="grey",
+ 	vertex.color="hotpink1",
+  vertex.label.color="black",
+  vertex.frame.color=NA,
+  vertex.size=V(Teilnetzwerk_Label_Major)$charts*5
+  )
+```
+
+Der größte Knoten ist das Major Label Universal Music Germany und daher auch das Label, das am häufigsten in den Charts vertreten ist. Schaut man sich die etwas kleineren Knoten in Reihenfolge: Sony Music Germany und Warner Music Germany an wird deutlich, dass Universal im Gesamten über die meisten Mutter und Tochterlabels verfügt. Schlussfolgernd ist Universal durch die Vielzahl seiner „Unterlabels“ der größte Knoten und hat dadurch am meisten Vertretungen in den Top 100 MTV Jahrescharts. Andere Labels, die von uns benannten No-Major Labels wie Jinx Music, Kayef Media und BMG haben die kleinsten Knoten, da ihr Gesamtnetzwerk kleiner ist und sind somit weniger häufig in den Charts vertreten. Das No-Major Label, das den größten Knoten besitzt, ist Groove Attack. Durch die Unterlabels wie Indipendenza, Stay High oder Life is Pain, ist Groove Attack als No- Major Label am meisten in den MTV Top 100 Jahrescharts vertreten.
+
+*Teilnetzwerk nach Geschlecht*
+
+```{r Teilnetzwerke Künstler nach sex, fig.high=6, fig.width=9}
+# Erstellen des Teilnetzwerks aller Frauen
+Teilnetzwerk_women <- induced.subgraph(h, V(h) [sex == "2"])
+
+# legt fest, dass mehrere Netzwerke nebeneinander angezeigt wird
+par(mfrow=c(1,2), mar=c(1,1,1,1))
+
+# Visualiseren des Teilnetzwerks in Rot
+
+plot(Teilnetzwerk_women, layout=layout_with_fr,
+ 	main="Teilnetzwerk Frauen",
+ 	sub="in den Top 100 Jahrescharts",
+ 	asp=0,
+ 	edge.arrow.size=1,
+ 	edge.width=E(h)$weight,
+ 	edge.color="grey",
+ 	vertex.color="pink",
+ 	vertex.label.color="black",
+ 	vertex.frame.color=NA,
+ 	vertex.size=degree(Teilnetzwerk_women, mode="all")*5
+ 	)
+ 	
+ 	# Erstellen des Teilnetzwerks aller Männer
+Teilnetzwerk_men <- induced.subgraph(h, V(h) [sex == "1"])
+
+# Visualiseren des Teilnetzwerks in Blau
+
+plot(Teilnetzwerk_men, layout=layout_with_fr,
+ 	main="Teilnetzwerk Männer",
+ 	sub="in den Top 100 Jahrescharts",
+ 	asp=0,
+ 	edge.arrow.size=1,
+ 	edge.width=E(h)$weight,
+ 	edge.color="grey",
+ 	vertex.color="lightblue",
+  vertex.label.color="black",
+  vertex.frame.color=NA,
+  vertex.size=degree(Teilnetzwerk_men, mode="all")*5
+)
+```
+
+Unterteilt man die Künstler im Gesamtnetzwerk nach Geschlecht, fällt auf, dass in den Top 100 Jahrescharts deutlich mehr männliche, deutschsprachige Hip-Hop-Musiker vertreten sind als weibliche Künstlerinnen. Die sieben erfolgreichsten Frauen im Hip-Hop-Jahr 2020 stehen 26 Männern gegenüber. 
+Dabei fällt auf, dass die Frauen untereinander nicht gerade kooperationsfreudig sind. Dies zeigt sich auch an der Dichte des Netzwerks, das mit etwa 9,5 % der realisierten Verbindungen recht gering ausfällt.  Besonders, weil nur sieben Knoten das Teilnetzwerk bilden. Einzig Loredana kooperiert mit zwei anderen Künstlerinnen (degree=2, betweenness= 2, closeness= 0,33). Ihr Song „Kein Wort“ gemeinsam mit Juju schaffte es dabei auf die 24 der Top 100 Jahrescharts. Sie erhielt zudem mit insgesamt acht Goldenen Schallplatten die meisten aller Künstlerinnen. 
+Bei den Männern scheint auf den ersten Blick ein engerer Zusammenhalt zu bestehen. Die Dichte des Netzwerks liegt mit rund 10,8 % der realisierten Verbindungen aber nur geringfügig über dem Teilnetzwerk der Frauen. Dabei befinden sich allerdings knapp viermal so viele Künstler im Teilnetzwerk. Der kooperationsfreudigste Knoten ist bei den männlichen Musikern Capital Bra (degree=7, betweenness=126,5, closeness= 0,0085). Er hat sieben direkte Kooperationen mit anderen Musikern. Im Hinblick auf sein Ego-Netzwerk ist zudem interessant, dass er mit drei der sieben Hip-Hopperinnen zusammenarbeitet. 
+
+*Teilnetzwerke nach Awards*
+Die Gold-, Platin- und Diamond-Auszeichnungen werden im Bereich „Deutscher Hip-Hop“ vom Bundesverband Musikindustrie E.V. verliehen. Gold bedeutet dabei, dass eine Single oder ein Album 100.000-fach verkauft wurde. Ab 200.000 verkauften Platten wird ein*e Künstler*innen und damit auch immer sein*ihr Label mit Platin ausgezeichnet. Ein Diamond Award wird eher selten verliehen, da eine Auszeichnung 750.000 verkaufte Platten erfordert. Es ist auch möglich, dass ein*e Künstler*in/Label öfter als einmal mit einem Award gekürt wird.
+Mit der Selektion nach den verschiedenen Awards soll herausgefiltert werden, wie viele und welche Künstler mit den einzelnen Awards im Jahr 2020 ausgezeichnet wurden. Dabei wird deutlich, welche Künstler und welche Labels in diesem Jahr im Gesamtnetzwerk h am erfolgreichsten sind. 
+
+```{r Teilnetzwerk Gold-Awards, fig.high=12, fig.width=16}
+##Teilnetzwerk Gold
+# erstellt Teilnetzwerk Gold mit Selektion nach Vertex-Atrributen. Nur die Knoten, die mindestens mit einem Gold Music Award ausgezeichnet wurden, werden behalten.
+gold <- induced_subgraph(h, V(h)[awardgold>="1"])
+gold
+
+
+#Visualisierung
+plot(gold,
+     main="Gold Music Awards",
+     vertex.color="gold",
+     vertex.size=V(gold)$awardgold/2,
+     vertex.frame.color=NA,
+     vertex.label.color="black", 
+     edge.color="grey80",
+     edge.arrow.size=.3,
+     sub="Alle Knoten, die mit mindestens einem Gold Music Award ausgezeichnet wurden.",)
+```
+
+Das Teilnetzwerk Gold zeigt, dass viele Künstler*innen im Gesamtnetzwerk h mit einem Gold Award ausgezeichnet wurden. Da das Gesamtnetzwerk nur Künstler*innen aus den Top 100 der Hip-Hop Charts 2020 enthält, war das zu erwarten. Besonders hervorzuheben ist hier Capital Bra, welcher mit 16 Gold Awards am meisten Erfolg hatte. 
+
+```{r Teilnetzwerk Platin-Awards, fig.high=12, fig.width=16}
+##Teilnetzwerk Platin
+# erstellt Teilnetzwerk Platin mit Selektion nach Vertex-Atrributen. Nur die Knoten, die mindestens mit einem Platin Musik Award ausgezeichnet wurden, werden behalten.
+platin <- induced.subgraph(h, V(h)[awardplatin>"0"])
+platin
+
+#Visualisierung
+plot(platin,
+     main="Platin Music Awards",
+     vertex.color="grey",
+     vertex.frame.color=NA,
+     vertex.label.color="black",
+     vertex.size=V(platin)$awardplatin,
+     edge.color="grey80",
+     edge.arrow.size=.3,
+     sub="Alle Knoten, die mit mindestens einem Platin Music Award ausgezeichnet wurden.",)
+
+```
+Im Teilnetzwerk Platin sind schon ersichtlich weniger Künstler vertreten als zuvor im Gold Teilnetzwerk. Auch hier liegt Capital Bra mit 6 Platin Auszeichnungen vor den anderen Künstlern.
+
+```{r Teilnetzwerk Diamond-Awards, fig.high=12, fig.width=16}
+
+##Teilnetzwerk Diamond
+# erstellt Teilnetzwerk Diamond mit Selektion nach Vertex-Atrributen. Nur die Knoten, die mindestens mit einem Diamond Musik Award ausgezeichnet wurden, werden behalten.
+diamond <-induced.subgraph(h, V(h)[awarddiamond>"0"]) 
+diamond
+
+#Visualisierung
+plot(diamond,
+     main="Diamond Music Awards",
+     vertex.color="cyan3",
+     vertex.frame.color=NA,
+     vertex.label.color="black",
+     edge.color="grey80",
+     edge.arrow.size=.3,
+     sub="Alle Knoten, die mit mindestens einem Diamond Music Award ausgezeichnet wurden.",)
+```
+Wie bereits erwähnt, ist die Auszeichnung mit einem Diamond Award äußerst selten. Dies wird auch hier im Teilnetzwerk Diamond sichtbar. Apache 207 konnte 2020 als einziger Künstler mit seiner Single „Roller“ Diamant-Status erreichen. Damit sind auch sein Label Two Sides, das Mutter Label Four Music und das Major Label Sony Gewinner des Awards. Das Diamond Netzwerk zeigt also eindeutig, dass Apache 207 sowie die Labels, bei denen er unter Vertrag steht, der erfolgreichste Künstler in Deutschland im Jahr 2020 ist.
+
+```{r Teilnetzwerke nach Awards, fig.high=12, fig.width=16}
+
+#Vergleich
+par(mfrow=c(1,3), mar=c(0,0,1,2))
+plot(gold, edge.arrow.size=.3, main="Gold Awards", vertex.frame.color=NA, vertex.label.color="black")
+plot(platin, edge.arrow.size=.3,  main="Platin Awards", vertex.frame.color=NA, vertex.label.color="black")
+plot(diamond, edge.arrow.size=.3,  main="Diamond Awards", vertex.frame.color=NA, vertex.label.color="black")#
+par(mfrow=c(1,1), mar=c(0,0,1,2))
+```
+Betrachtet man im direkten Vergleich die Major Label, fällt auf, dass Universal Music mit Abstand die meisten Gold und Platin Awards gewinnen konnte.
+
+*Teilnetzwerk nach fans*
+
+Für dieses Netzwerk ist besonders der Vergleich der Fananzahl interessant. Die Fans sind nach Anzahl der Follower des Künstlers/Labels auf Instagram definiert und gemessen. Der Stand ist vom Februar 2020. Die Anzahl wurde in 5 Kategorien untergliedert, 0 bis 100.000 100.001 bis 500.000, 500.001 bis 1.000.000, 1.000.001 bis 2.000.000 und zu guter Letzt alles höher als 2.000.000 Follower/ Fans. In diesem Gesamtnetzwerk sind die dunkelsten Knoten, welche mit den meisten Fans und abstufend bis hin zum hellsten Grau.
+
+```{r Teilnetzwerk nach fans, fig.high=9, fig.width=16}
+
+Teilnetzwerk_fans <- induced.subgraph(h, V(h)[fans!="n/a"])
+Teilnetzwerk_fans
+
+V(h) [V(h)$fans == 1] $color <- "gray90"
+V(h) [V(h)$fans == 2] $color <- "gray75"
+V(h) [V(h)$fans == 3] $color <- "gray60"
+V(h) [V(h)$fans == 4] $color <- "gray45"
+V(h) [V(h)$fans == 5] $color <- "gray30"
+ 
+# Visualiseren des Gesamtnetzwerks
+plot(Teilnetzwerk_fans, layout=layout_with_fr, asp=0,
+      main="Teilnetzwerk nach Fans, dargestellt in Farbabstufungen",
+     sub="Datenerhebung im Februar 2021",
+     vertex.size=12,
+     vertex.frame.color=NA,
+     vertex.label.color="black",
+     edge.color="black",
+     edge.arrow.size=6,
+     vertex.frame.color="white",
+     )
+
+```
+
+Demnach sind Stay High, Hypnotize Entertainment, Indipendenza, Aggro Berlin, Rebell Army, 187 Strassenbande, SoulForce Records, Urban, Downbeat Records, Essah Media und XY Records nicht zu beachten. Diesbezüglich spannend ist jedoch, dass sie trotz fehlendem Social Media Auftritt eine große Fangemeinschaft besitzen müssen, da sie in den Top Charts zu finden sind. Den beliebtesten Instagram-Account mit über mehr als 2.000.000 Follower/ Fans besitzt Bonez MC (Instagram, 2021). Er ist kein Newcomer, sondern bereits am 30. Januar 2015 erreichte er und 187 Strassenbande Rang zwei der deutschen Albumcharts (juice, 2015).
+Als followerschwächste Künstler schneiden Joshi Mizu, Fourty und Alies ab. Alle drei Künstler sind erst seit ein paar Monaten und Jahren an der Spitze der Deutschen Charts. Joshi Mizu ist erreichte 2019 mit „Skifahren“ das erste Mal den 4ten Platz (Redbull, 2020). Fourty bekam seinen Plattenvertrag bei Life is Pain im Jahr 2018 und im Februar 2020 erschien Weisser Rauch als erste Auskopplung seiner Debüt-EP und als erster Song des Rappers welcher sich in Single-Charts platzierte. Kool Savas gab 2020 bekannt, dass er die Sängerin Alies auf Essah Entertainment signt und seit dem Song (Hip HOP, 2020).
+Song AMG „an mich glauben“ wanderte Alies das erste Mal gemeinsam mit Kool Savas in die Charts. Bezüglich der Labels ist es wichtig zu erwähnen, dass in der Regel Plattenlabels weniger Follower besitzen als die einzelnen Künstler, da ein Label nicht darauf zielt, viele Fans zu haben, sondern die Vertragskünstler berühmt zu machen (Kook, 2006). Die zwei stärksten Labels sind Bra Musik und Banger Musik, welche beide tabellarisch gesehen zwischen 100.001 bis 500.000 Fans besitzen. Beide Labels sind von einem bereits bekannten Star gegründet wurden. Im Februar 2019 wurde bekannt, dass Capital Bra sein eigenes Label namens Bra Musik gegründet hat (Bra Music, 2019). Der deutsche Rap/Hip Hop-Independent-Label Banger Musik wurde bereits 2012 vom Rapper Farid Bang sowie Ralph M. Jacobs und Mohamed Elbouhlali gegründet. Hieraus ist zu schließen, dass die Bekanntheit der Künstler mit der des Labels zusammenhängt.
+
+### Teilnetzwerke nach Edge-Attributen
+Das Netzwerk besteht aus acht verschiedenen Beziehungsarten: Gemeinsame Single oder gemeinsames Album von Künstler, sowie die Beziehungen von den Künstler zu den jeweiligen Kategorien der Label: Künstler und Tochterlabel, Künstler und Mutterlabel, Künstler und Majorlabel. Und die Beziehungsarten, welche die Verbindungen innerhalb der Labels umfassen: Tochter- und Mutterlabel, Mutter- und Majorlabel, Tochter- und Majorlabel. Alle Beziehungsarten wurden mit den Stufen leichte, mittlere und starke Beziehung gewichtet.
+
+*Teilnetwerke nach Stärke der Beziehung*
+Durch die Teilnetzwerke Künstler, Label (Tochter, Mutter, Major) ist ersichtlich, dass die Künstler untereinander Verbindungen respektive Beziehungen haben. Die Labels sind innerhalb ihrer Labelkategorie vernetzt, jedoch nicht verbunden und stehen demnach alleine im Netzwerk.
+Je nach beziehungsstärke ist die Kante breiter oder dünner. Besonders hervorgehoben sind hierbei die Beziehung zwischen Apache 207 & Sido, Bausa & RIN, Samra & Jamule, Nimo & Jamule. 
+
+```{r Teilnetzwerke nach weight, fig.high=9, fig.width=16}
+library(igraph)
+
+einfach <- subgraph.edges(h, E(h)[weight==1]) 
+mittel <- subgraph.edges(h, E(h)[weight==2])
+stark <- subgraph.edges(h, E(h)[weight==3])
+
+plot(einfach, layout=layout_with_kk,
+     main="Einfach ausgeprägte Beziehungen",
+     vertex.label.color="black",
+     vertex.frame.color=NA,
+     edge.arrow.size=5,
+     edge.color="grey")
+
+plot(mittel, layout=layout_with_kk,
+     main="Mittelmäßig ausgeprägte Beziehungen",
+     vertex.label.color="black",
+     vertex.frame.color=NA,
+     edge.arrow.size=5,
+     edge.color="grey")
+
+plot(stark, layout=layout_with_kk,
+     main="Stark ausgeprägte Beziehungen",
+     vertex.label.color="black",
+     vertex.frame.color=NA,
+     edge.arrow.size=5,
+     edge.color="grey")
+
+```
+INTERPRETATION FEHLT!
+
+### Besondere Ego-Netzwerke
+
+Einige Akteure sind bei der Analyse aus unterschiedlichen Gründen besonders hervorgestochen. Diese haben wir im Folgenden noch einmal genauer untersucht.
+
+*Majorlabel als Ego-Netzwerke*
+
+```{r Ego-Netzwerke Majorlabels, fig.high=6, fig.width=10}
+# legt fest, dass mehrere Netzwerke nebeneinander angezeigt wird
+par(mfrow=c(1,3), mar=c(1,1,1,1))
+
+
+# 1. Ego-Netzwerk Sony, erster Grad
+
+## Alle Knoten, die mit Sony verbunden sind
+son <- make_ego_graph(h, order = 1, nodes = V(h)$name == "Sony Music Germany", mode ="all")
+son
+
+## Visualisierung des selektierten Ego-Netzwerks
+son1 <- son[[1]]
+son1
+
+plot(son1, 
+     main="Ego-Netzwerk Sony, erster Grad",
+     edge.width=E(son1)$weight,
+     edge.color="grey",
+     vertex.label.color="black",
+     vertex.frame.color=NA,
+     vertex.size=10
+     )
+
+# 2. Ego-Netzwerk Warner, erster Grad
+
+## Alle Knoten, die mit Warner verbunden sind
+war <- make_ego_graph(h, order = 1, nodes = V(h)$name == "Warner Music Germany", mode ="all")
+war
+
+## Visualisierung des selektierten Ego-Netzwerks
+war1 <- war[[1]]
+war1
+
+plot(war1, 
+     main="Ego-Netzwerk Warner, erster Grad",
+     edge.width=E(war1)$weight,
+     edge.color="grey",
+     vertex.label.color="black",
+     vertex.frame.color=NA,
+     vertex.size=10
+     )
+
+# 3. Ego-Netzwerk Universal, erster Grad
+
+## Alle Knoten, die mit Universal verbunden sind
+uni <- make_ego_graph(h, order = 1, nodes = V(h)$name == "Universal Music Germany", mode ="all")
+uni
+
+## Visualisierung des selektierten Ego-Netzwerks
+uni1 <- uni[[1]]
+uni1
+
+plot(uni1, 
+     main="Ego-Netzwerk Universal, erster Grad",edge.arrow.size=1,
+     edge.width=E(uni1)$weight,
+     edge.color="grey",
+     vertex.label.color="black",
+     vertex.frame.color=NA,
+     vertex.size=10
+     )
+```
+INTERPRETATION FEHLT!
+
+*Ego-Netzwerk Apache 207 1. Ordnung*
+Nach der Analyse der verschiedenen Auszeichnungen, konnten Capital Bra und Apache 207 als erfolgreichste Künstler im Jahr 2020 benannt werden. Um herauszufinden, ob dieser Erfolg auf Kooperationen oder bestimmte Verbindungen zurückzuführen ist, werden im Folgenden Ego-Netzwerke 1. und 2. Grades von Apache 207 und Capital Bra dargestellt.
+
+```{r Ego-Netzwerk Apache 207 1.Ordnung}
+
+# selektiert aus dem Netzwerk h alle Knoten, die mit Apache 207 über einen Schritt verbunden sind.
+apache <- make_ego_graph(h, order = 1, nodes = V(h)$name == "Apache 207", mode ="all")
+
+# visualisierung
+apache1 <- apache[[1]]
+apache1
+
+#umrandet den Knoten Apache 207 rot
+V(apache1)[V(apache1)$name == "Apache 207"]$frame.color <- "red"
+
+
+plot(apache1, 
+     main="Ego-Netzwerk Apache 207, 1.Grad",
+     sub="nur direkte Beziehungen des ersten Grades",
+     edge.arrow.size=.3,
+     edge.color="grey",
+     vertex.label.color="black",
+     vertex.size=degree(apache1, mode="all")*5,
+     layout=layout_as_star(apache1, center = V(apache1)["Apache 207"])
+     )
+```
+Erst ab 2019 steht Apache 207 bei Two Sides unter Vertrag. Sein Durchbruch erfolgte ebenfalls im Jahr 2019. Mit dem Song „Roller“ erreichte er seine erste Top 10 Platzierung in deutschen Charts. Wie man im Ego-Netzwerk 1. Grades von Apache 207 feststellen kann, hat er außer zu seinem Label Two Sides sowie dessen Mutterlabel Four Music und dem Major Label Sony Music nur eine weitere Verbindung zum Rapper Sido. Das Apache 207 über ein recht übersichtliches Netzwerk verfügt, könnte eventuell daran liegen, dass dieser als Newcomer noch nicht sehr lange im Hip-Hop Bereich tätig ist. 
+
+*Ego-Netzwerk Capital Bra 1. Ordnung*
+```{r Ego-Netzwerk Capital Bra 1.Ordnung}
+# selektiert aus dem Netzwerk h alle Knoten, die mit Capital Bra über einen Schritt verbunden sind.
+capi <- make_ego_graph(h, order = 1, nodes = V(h)$name == "Capital Bra", mode ="all")
+# liefert eine Liste der Verbindungen
+capi
+# Visualisierung
+capi1 <- capi[[1]]
+capi1
+
+#umrandet den Knoten Cabital Bra rot
+V(capi1)[V(capi1)$name == "Capital Bra"]$frame.color <- "red"
+
+
+plot(capi1, 
+     main="Ego-Netzwerk Capital Bra, 1.Grad",
+     sub="nur direkte Beziehungen des ersten Grades",
+     edge.arrow.size=.3,
+     edge.color="grey",
+     vertex.label.color="black",
+     vertex.size=degree(capi1, mode="all")*5,
+     layout=layout_as_star(capi1, center = V(capi1)["Capital Bra"]),
+     )
+
+```
+Das Ego-Netzwerk 1. Grades von Capital Bra zeigt, dass dieser weitaus mehr Verbindungen zu anderen Künstlern aus der Branche hat als Apache 207. Auffallend ist auch, dass dieses Netzwerk bereits stark vernetzt ist. 
+
+*Ego-Netzwerke Apache 207 & Capital Bra 1. Ordnung im Vergleich*
+
+```{r Darstellung als Vergleich 1. Ordnung, fig.high=6, fig.width=9}
+
+par(mfrow=c(1,2), mar=c(1,1,1,1))
+
+plot(apache1,
+     main="Erster Grad",
+     asp=0,
+     edge.arrow.size=.3,
+     edge.color="grey",
+     vertex.label.color="black")
+plot(capi1,
+     main="Erster Grad",
+     asp=0,
+     edge.arrow.size=.3,
+     edge.color="grey",
+     vertex.label.color="black")
+```
+
+*Ego-Netzwerk Apache 207 2. Ordnung*
+```{r Ego-Netzwerk Apache 207 2.Ordnung, fig.high=6, fig.width=9}
+
+apache2 <- make_ego_graph(h, order = 2, nodes = V(h)$name == "Apache 207", mode ="all")
+apache2 <- apache2[[1]]
+
+#umrandet den Knoten Apache 207 rot
+V(apache2)[V(apache2)$name == "Apache 207"]$frame.color <- "red"
+
+plot(apache2, 
+     main="Ego-Netzwerk Apache 207, 2. Grad",
+     sub="Beziehungen des ersten und zweiten Grades",
+     edge.arrow.size=.3,
+     edge.color="grey",
+     vertex.label.color="black",
+     layout=layout_as_star(apache2, center = V(apache2)["Apache 207"]),
+    )
+```
+Auch im Ego-Netzwerk 2. Grades kommen nicht viele andere Verbindungen hinzu.
+Es lässt sich also sagen, dass der Erfolg hier offensichtlich nicht mit der Größe des Netzwerks von Apache 207 zusammenhängt.
+
+*Ego-Netzwerk Capital Bra 2. Ordnung*
+```{r Ego-Netzwerk Capital Bra 2.Ordnung,  fig.high=9, fig.width=16}
+
+capi2 <- make_ego_graph(h, order = 2, nodes = V(h)$name == "Capital Bra", mode ="all")
+capi2 <- capi2[[1]]
+
+#umrandet den Knoten Capital Bra rot
+V(capi2)[V(capi2)$name == "Capital Bra"]$frame.color <- "red"
+
+plot(capi2, 
+     main="Ego-Netzwerk Capital Bra, 2. Grad",
+     sub="Beziehungen des ersten und zweiten Grades",
+     edge.arrow.size=.3,
+     vertex.label.color="black",
+     layout=layout_as_star(capi2, center = V(capi2)["Capital Bra"]),
+     )
+
+```
+Gerade im Ego-Netzwerk 2. Grades, welches sich noch einmal stark ausgeweitet hat, wird dies noch offensichtlicher. Da Capital Bra bereits 2016 sein erstes Album veröffentlichte, hatte er im Gegensatz zu Apache 207, mehr Zeit um sein Netzwerk entsprechend auszuweiten. Ein starkes Netzwerk könnte in diesem Fall also durchaus zum Erfolg verhelfen.  
+
+*Ego-Netzwerke Apache 207 & Capital Bra 2. Ordnung im Vergleich*
+```{r Darstellung als Vergleich 2. Ordnung, fig.high=9, fig.width=16}
+
+par(mfrow=c(1,2), mar=c(1,1,1,1))
+
+plot(apache2, 
+     main="Zweiter Grad",
+     asp=0,
+     edge.arrow.size=.3,
+     edge.color="grey",
+     vertex.label.color="black")
+
+plot(capi2, 
+     main="Zweiter Grad",
+     asp=0,
+     edge.arrow.size=.3,
+     edge.color="grey",
+     vertex.label.color="black")
+```
+
+*Ego-Netzwerk Monet192*
+
+Bei genauerer Betrachtung fällt auf, dass Monet192 eine besondere Stellung in diesem Netzwerk hat. Normalerweise sind die Künstler unseres Gesamtnetzwerks in ein Geflecht aus Tochter-, Mutter-, und Majorlabel eingebunden. Monet192 ist jedoch der einzige Künstler, der lediglich einen direkten Draht zu einem Majorlabel hat. 
+
+HIER FEHLT RECHERCHE!
+
+*Ego-Netzwerk Pashanim*
+In der Datenerhebung und Visualisierung kann man erkennen, dass Pashanim wesentlich weniger Verbindungen als die anderen Künstler hat, obwohl er durch seine hohe Chartplatzierung und Instagramfollower ein relevanter Akteur ist. Das liegt daran, dass er seine Musik in Eigenregie über Platfformen wie Soundcloud oder Youtube veröffentlicht und bisher keinen Labeldeal zu einem Major-, Mutter-  oder Tochtlerlabel hat.
+
+HIER FEHLT RECHERCHE!
+
+
+## Gesamtnetzwerke visualisieren und untersuchen
+
+*Gesamtnetzwerk nach degree*
+In diesem Gesamtnetzwerk werden die Knoten nach Degree-Wert farblich abgestuft dargestellt und anhand der Größe hervorgehoben. Die Knoten mit den höchsten Degree-werten sind die dunkelsten und größten Punkte und die niedrigsten Werte sind hellblaue und kleine Knoten.
+```{r Gesamtnetzwerk nach degree, dargestellt in Farbabstufungen, fig.high=9, fig.width=16}
+ 
+# Farbenskalen aufrufen
+library(RColorBrewer)
+display.brewer.all
+ 
+# degreewert aufrufen
+ds <- degree(h)
+ds
+ 
+# Abstufung von 10 Schritten
+fine = 10
+ 
+#Farbverlauf festlegen in Blautönen
+blau = colorRampPalette(c('lightblue','darkblue'))
+ 
+abstufung = blau(fine)[as.numeric(cut(ds, breaks = fine))]
+ 
+# Visualiseren des Teilnetzwerks
+plot(h, layout=layout_with_fr, asp=0,
+      main="Gesamtnetzwerk nach degree, dargestellt in Farbabstufungen",
+     sub="Je dunkler der Blauton, desto höher ist der Degree-Wert des Knotens.",
+     asp=0,
+     #vertex.size=ds,
+     vertex.color=abstufung,
+     vertex.frame.color=NA,
+     vertex.label.color="black",
+     edge.color="lightblue",
+     edge.arrow.size=6,
+     )
+ 
+```
+Auffällig ist hier, dass Universal Music den mit Abstand dunkelsten und größten Knoten besitzt. Darauf folgen die weiteren Majorlabels, so wie Mutter- und Tochterlabel, da diese die meisten Verbindungen zu den unterschiedlichen Künstlern besitzen. Ohne Beziehungen stehen auch hier wieder Pashanim, sowie Kayef und sein Label Kayef Media. Überraschend stark hervorgehoben ist das Label Groove Attack, welches viele Hip Hop Künstler so wie Tochterlabel miteinander vereint. Im Verlauf der vergangenen zwei Jahrzehnte feierte Groove Attack einige Chart-Notierungen, Platz #1 Nominierung in den Single- & Album-Charts, Goldene Schallplatten sowie nationale und internationale Auszeichnungen (Groove Attack, 2021). Demnach möglicherweise eine funktionierende Strategie innerhalb des Hip Hop Musik-Business.  
+
+
+*Prüfung Cluster*
+```{r Prüfung verbundener Cluster}
+# Anzahl der Clusters
+clusters(h)
+
+# Sind die Cluster miteinander verbunden?
+is_connected(h)
+```
+*Cluster Edge-Betweenness*
+```{r Cluster Edge-Betweenness, fig.high=9, fig.width=16}
+
+# erstellt die Berechnung für die Modularität und deren Teilgruppen
+Gesamtnetzwerk_Cluster_Edge_Betweenness <- cluster_edge_betweenness(h)
+
+plot(Gesamtnetzwerk_Cluster_Edge_Betweenness, 
+     h,
+     main="Gesamtnetzwerk Edge-Betweenness Cluster", 
+     sub="nachtragen",
+     asp=0,
+     vertex.size=10,
+     vertex.label.color="black",
+     vertex.frame.color="black",
+     edge.arrow.size=5,
+     edge.color="grey")
+```
+
+Das Edge-Betweenness-Cluster sucht im gesamten Graphen mittels eines Algorithmus nach dicht zusammenhängenden Teilgraphen, auch Communities genannt.
+Die Idee hinter jenem Cluster basiert darauf, dass es wahrscheinlich ist, dass Kanten, die getrennte Module verbinden, eine hohe „Kantenverweildauer“ (Edge-Betweenness) haben, da alle kürzesten Pfade von einem Modul zum anderen durch sie verlaufen müssen. 
+Wenn also nach und nach die Kante mit dem höchsten Edge-Betweenness-Wert entfernt werde, entstehe eine hierarchische Abbildung, eine Art verwurzelter Baum, der als Dendrogramm des Graphen bezeichnet wird. Die Blätter des Baums sind dabei die einzelnen Knoten und die Wurzel des Baums repräsentiert den gesamten Graphen.
+Das Cluster führt diesen Algorithmus aus, indem die Edge-Betweenness-Werte des Graphen berechnet werden und nach und nach die Kanten mit den höchsten Edge-Betweenness entfernt werden. Hinterher fügt das Cluster alles dann wieder zu einem, in Communities unterteilten, Gesamtnetzwerk zusammen.
+Jenes Cluster unterteilt die Hip-Hop-Künstler*innen und -Labels in sieben Communities, die aus minimal einem Knoten bis maximal 23 Knoten bestehen. 
+
+*Cluster Walktrap*
+```{r Cluster Walktrap, fig.high=9, fig.width=16}
+Gesamtnetzwerk_Cluster_Walktrap	<-	cluster_walktrap(h)
+
+plot(Gesamtnetzwerk_Cluster_Walktrap,
+     h,
+     main="Gesamtnetzwerk Cluster-Walktrap", 
+     sub="nachtragen",
+     asp=0,
+     vertex.size=10,
+     vertex.label.color="black",
+     vertex.frame.color="black",
+     edge.arrow.size=5,
+     edge.color="grey")
+```
+
+Auch das Walktrap-Cluster ist ein Algorithmus, der versucht, dicht zusammenhängende Teilgraphen, auch Communities genannt, in einem Graphen zu finden. Die Idee dahinter ist, dass sogenannte „Short Random Walks“ dazu neigen, in der gleichen Community zu bleiben. Also: Wenn viele scheinbar zufällige kurze Wege zwischen Knoten vorhanden sind, fasst der Walktrap-Algorithmus diese zu einer Community zusammen. 
+Aus den Hip-Hop-Künstler:innen und -Labels extrahiert das Walktrap-Cluster neun solcher Communities (oder Teilgraphen). Diese bestehen aus minimal einem bis maximal 18 Knoten. 
+
+*Cluster im Vergleich*
+```{r Vergleich Edge-Betweenness und Walktrap, fig.high=12, fig.width=32}
+
+#Edge-Betweenness
+Gesamtnetzwerk_Cluster_Edge_Betweenness <- cluster_edge_betweenness(h)
+
+plot(Gesamtnetzwerk_Cluster_Edge_Betweenness, 
+     h,
+     main="Gesamtnetzwerk Edge-Betweenness-Cluster", 
+     sub="nachtragen",
+     asp=0,
+     vertex.size=10,
+     vertex.label.color="black",
+     vertex.frame.color="black",
+     edge.arrow.size=5,
+     edge.color="grey")
+
+#Walktrap
+Gesamtnetzwerk_Cluster_Walktrap	<-	cluster_walktrap(h)
+
+par(mfrow=c(1,2), mar=c(0,0,2,1)) 
+
+plot(Gesamtnetzwerk_Cluster_Walktrap,
+     h,
+     main="Gesamtnetzwerk Walktrap-Cluster", 
+     sub="nachtragen",
+     asp=0,
+     vertex.size=10,
+     vertex.label.color="black",
+     vertex.frame.color="black",
+     edge.arrow.size=5,
+     edge.color="grey")
+
+```
+Vergleicht man die zwei gewählten Cluster miteinander, so fällt auf, dass das Walktrap-Cluster etwas kleinteiligere Communities erstellt, als das Edge-Betweenness-Cluster. Dadurch entstehen auf eine Gesamtheit von 62 Knoten neun anstatt sieben Communities. 
+Inspiziert man explizit die Grenzfälle der beiden Cluster, also die Knoten, die von den Algorithmen in verschiedene Communities „gesteckt“ wurden, so fällt auf, dass das Edge-Betweenness-Cluster einige Künstler:innen von ihren Labels getrennt hat und sie eher in Communities mit anderen Künstler:innen, mit denen sie kooperieren, eingeordnet hat (siehe Beispiele Sido oder Rin). 
+Dabei wurden Rin sogar der Community mit dem Major-Label Warner Music Germany zugeteilt, obwohl er über GOLD LEAGUE eigentlich bei Universal Music Germany angestellt ist. 
+Zudem zieht das Edge-Betweenness-Cluster Warner Music Germany und Groove Attack zusammen, obwohl Groove Attack ein Independent-Label ist, dass Major-Labels den Rücken kehrt.
+Für das vorliegende Netzwerk scheint daher das Walktrap-Cluster einen realitätsnäheren Rahmen herzustellen. Durch das unterteilen in etwas kleinere, spezifischere Communities können Gruppen erkannt werden, die tatsächlich eng miteinander zusammenarbeiten. Zudem werden Künstler*innen nicht von ihren Labels getrennt und immer in eine Community mit dem Label eingeordnet, bei dem sie direkt unter Vertrag stehen. 
+
+*Spezialfall: InfluenceR*
+
+```{r InfluenceR Paket: Analyse von einflussreichen Knoten, fig.height=9, fig.width=16, message=FALSE, warning=FALSE, paged.print=FALSE}
+#einlesen
+library(igraph)
+library(influenceR)
+
+# 1. ens(g) berechnet den Zugang zu strukturellen Löchern in einem Netzwerk
+# 2. bridging(g) berechnet die Knoten, die es ermöglichen, schneller andere Knoten zu erreichen, sogenannte Brücken. (nach Valente)
+
+holes <- ens(h)
+which.max(holes)
+
+#Universal Music Germany
+
+bridges <- bridging(h)
+which.max(bridges)
+
+#Jinx Music
+
+# weist den größten und kleinsten Werten eine Randfarbe zu
+V(h)[V(h)$name == "Universal Music Germany"]$frame.color <- "green"
+V(h)[V(h)$name == "Jinx Music"]$frame.color <- "red"
+
+plot(h, layout=layout_nicely,
+     main="Einflussreiche Knoten",
+     sub="Strukturelle Löcher (grün) und Brücken (rot)",
+     edge.arrow.size=.4,
+     edge.color="black",
+     vertex.color="lemonchiffon",
+     vertex.label.color="black"
+     )
+```
+Mit der Programmbibliothek InfluenceR ließen sich zwei relevante Knoten isolieren, die für die Konfiguration des Netzwerks relevant sind: Universal Music Germany ermöglicht es, sogenannte strukturelle Löcher im Netzwerk anzusprechen während Jinx Music eine Brückenfunktion übernimmt.
+
+
+## Zentralitätsmaße
+
+Im weiteren Verlauf soll das Gesamtnetzwerk noch einmal mit allen aufgeführten Teilnetzwerken auf verschiedene Zentralitätsmaße verglichen und untersucht werden. 
+
+### Dichte
+
+```{r Dichte}
+# Berechnen der Dichte (density) des Gesamtnetzwerks
+
+edge_density(h, loops = FALSE)
+
+# Berechnen der Dichte der Teilnetzwerke der Künstler und Labels
+edge_density(Teilnetzwerk_Kuenstler, loops = FALSE)
+edge_density(Teilnetzwerk_Labels, loops = FALSE)
+
+edge_density(Teilnetzwerk_Sony, loops = FALSE)
+edge_density(Teilnetzwerk_Universal, loops = FALSE)
+edge_density(Teilnetzwerk_Warner, loops = FALSE)
+edge_density(Teilnetzwerk_NoMajor, loops = FALSE)
+edge_density(Teilnetzwerk_women, loops = FALSE)
+edge_density(Teilnetzwerk_men, loops = FALSE)
+edge_density(Teilnetzwerk_Label_Tochter, loops = FALSE)
+edge_density(Teilnetzwerk_Label_Mutter, loops = FALSE)
+edge_density(Teilnetzwerk_Label_Major, loops = FALSE)
+
+```
+Die Dichte des Gesamtnetzwerks liegt bei etwa 7,8 %. 
+Die Dichte der einzelnen Teilnetzwerke unterscheidet sich. Ein Vergleich der Teilnetzwerke der Künstler und der Labels zeigt dabei, dass die Künstler mit rund 9 % realisierter Verbindungen untereinander enger vernetzt sind als die Labels, mit nur knapp 7,9 %. 
+Bei der Dichte sticht besonders das Teilnetzwerk von Warner heraus, bei dem etwa 46,67 % realisiert werden. Relativierend ist dabei allerdings, dass dieses Teilnetzwerk nur aus 6 Knoten besteht.
+
+### Degree
+Je nach Auswahl des Netzwerks unterscheiden sich die Analyseergebnisse stark. Aus diesem Grund ist es wichtig, alle unsere Teilnetzwerke mit dem Gesamtnetzwerk der Künstler und Labels zu vergleichen. Die Funktion "which.max" wertet den höchsten Degree-Wert des jeweiligen Netzwerks aus.
+```{r Degree}
+
+# Degree Wert ausrechnen
+
+degree(h)
+degree(Teilnetzwerk_Sony)
+degree(Teilnetzwerk_Universal)
+degree(Teilnetzwerk_Warner)
+degree(Teilnetzwerk_NoMajor)
+degree(Teilnetzwerk_women)
+degree(Teilnetzwerk_men)
+degree(Teilnetzwerk_Kuenstler)
+degree(Teilnetzwerk_Labels)
+degree(Teilnetzwerk_Label_Tochter)
+degree(Teilnetzwerk_Label_Mutter)
+degree(Teilnetzwerk_Label_Major)
+
+# Degree: Gesamtnetzwerk
+Gesamtnetzwerk_degree <- degree (h)
+Gesamtnetzwerk_degree
+
+# Knoten mit dem höchsten Degree-Wert anzeigen
+which.max(Gesamtnetzwerk_degree)
+
+# Degree: Teilnetzwerk-Künstler
+Teilnetzwerk_Kuenstler_degree <- degree(Teilnetzwerk_Kuenstler)
+Teilnetzwerk_Kuenstler_degree
+
+# Künstler mit dem höchsten Degree-Wert anzeigen
+which.max(Teilnetzwerk_Kuenstler_degree)
+
+# Degree: Teilnetzwerk-Labels 
+Teilnetzwerk_Labels_degree <- degree(Teilnetzwerk_Labels)
+Teilnetzwerk_Labels_degree
+
+# Label mit dem höchsten Degree-Wert anzeigen
+which.max(Teilnetzwerk_Labels_degree)
+
+```
+Analysiert man die Degreewerte, so werden die Knoten mit den häufigsten starken Beziehungen hervorgehoben. 
+- für das Gesamtnetzwerk (h): Knoten 63 mit einem Degree-Wert von max 26
+- für das Teilnetzwerk (Teilnetzwerk_Sony): Knoten 11 mit einem Degree-Wert von max 10
+- für das Teilnetzwerk (Teilnetzwerk_Universal): Knoten 27 mit einem Degree-Wert von max 26
+- für das Teilnetzwerk (Teilnetzwerk_Warner): Knoten 6 mit einem Degree-Wert von max 5
+- für das Teilnetzwerk (Teilnetzwerk_NoMajor): Knoten 18 mit einem Degree-Wert von max 9
+- für das Teilnetzwerk (Teilnetzwerk_women): Knoten 7 mit einem Degree-Wert von max 2
+- für das Teilnetzwerk (Teilnetzwerk_men): Knoten 26 mit einem Degree-Wert von max 7
+- für das Teilnetzwerk (Teilnetzwerk_Kuenstler): Knoten 33 mit einem Degree-Wert von max 10
+- für das Teilnetzwerk (Teilnetzwerk_Labels): Knoten 29 mit einem Degree-Wert von max 12
+- für das Teilnetzwerk (Teilnetzwerk_Label_Tochter): alle Knoten mit einem Degree-Wert von 0
+- für das Teilnetzwerk (Teilnetzwerk_Label_Mutter): alle Knoten mit einem Degree-Wert von 0
+- für das Teilnetzwerk (Teilnetzwerk_Label_Major): alle Knoten mit einem Degree-Wert von 0
+
+Die absoluten Zahlen unserer Netzwerke sind jedoch lediglich begrenzt aussagekräftig: 
+Den höchsten Degreewert mit 26 hat das Teilnetzwerk Universal Music Germany gegenüber der anderen Mayorlabel-Netzwerken, da das Label mit vielen Künstlern als auch Labels vernetzt ist. 
+Betrachtet man die obigen Ergebnisse, ist außerdem stark ersichtlich, dass es 19 Knoten mehr im Teilnetzwerk der Männer gibt als in dem der Frauen und demnach auch die Vernetzungen stärker sind mit einem Degreewert von 7 bei den Männern und 2 bei den Frauen. Die auffälligsten Werte sind hiernach die Teilnetzwerke der Tochter-, Mutter- und Majorlabels, da diese keine Beziehungen untereinander aufweisen und demnach einen Degreewert von 0 haben. Dies könnte der Tatsache geschuldet sein, dass wir uns in unserer Forschungsarbeit auf 6 Beziehungsarten beschränkt hatten, die da wären: 
+gemeinsame Single von Künstlern
+gemeinsames Album von Künstlern 
+Künstler & Tochterlabel 
+Künstler & Mutterlabel 
+Künstler & Majorlabel
+Tochterlabel & Mutterlabel 
+Tochterlabel & Majorlabel 
+Mutterlabel & Majorlabel 
+In unserem Fall spielte lediglich die Verbindung unterhalb der Majorlabels eine Rolle. 
+
+### Betweenness
+Der Zentralitätswert "Betweenness" zeigt, wie relevant einzelne Knoten für die Vernetzung zu anderen Knoten sind. Demnach spielen hier Brücken oder Broker eine Rolle, welche zwischen den einzelnen Netzwerken verbinden können. Die Funktion "which.max" wertet den höchsten Betweenness-Wert des jeweiligen Netzwerks aus.
+
+```{r Betweenness}
+
+# Betweenness Wert ausrechnen
+
+betweenness(h)
+betweenness(Teilnetzwerk_Sony)
+betweenness(Teilnetzwerk_Universal)
+betweenness(Teilnetzwerk_Warner)
+betweenness(Teilnetzwerk_NoMajor)
+betweenness(Teilnetzwerk_women)
+betweenness(Teilnetzwerk_men)
+betweenness(Teilnetzwerk_Kuenstler)
+betweenness(Teilnetzwerk_Labels)
+#betweenness(Teilnetzwerk_Label_Tochter)
+#betweenness(Teilnetzwerk_Label_Mutter)
+#betweenness(Teilnetzwerk_Label_Major)
+
+# Betweenness: Gesamtnetzwerk
+Gesamtnetzwerk_between <- betweenness (h)
+Gesamtnetzwerk_between
+
+# Knoten mit dem höchsten Betweenness-Wert anzeigen
+which.max(Gesamtnetzwerk_between)
+
+# Betweenness: Teilnetzwerk-Künstler
+Teilnetzwerk_Kuenstler_between <- betweenness (Teilnetzwerk_Kuenstler)
+Teilnetzwerk_Kuenstler_between
+
+# Künstler mit dem höchsten Betweenness-Wert anzeigen
+which.max(Teilnetzwerk_Kuenstler_between)
+
+# Betweenness: Teilnetzwerk-Labels
+Teilnetzwerk_Labels_between <- betweenness (Teilnetzwerk_Labels)
+Teilnetzwerk_Labels_between
+
+# Label mit dem höchsten Betweenness-Wert anzeigen
+which.max(Teilnetzwerk_Labels_between)
+
+```
+- für das Gesamtnetzwerk (h): Universal Music Germany 1032.64
+- für das Teilnetzwerk (Teilnetzwerk_Sony): Sony Music Germany 57.67 
+- für das Teilnetzwerk (Teilnetzwerk_Universal): Universal Music Germany 434.67
+- für das Teilnetzwerk (Teilnetzwerk_Warner): Warner Music Germany 16
+- für das Teilnetzwerk (Teilnetzwerk_NoMajor): Groove Attack 109
+- für das Teilnetzwerk (Teilnetzwerk_women): Loredana 2
+- für das Teilnetzwerk (Teilnetzwerk_men): Jamule 181.67
+- für das Teilnetzwerk (Teilnetzwerk_Kuenstler): Capital Bra 289.47
+- für das Teilnetzwerk (Teilnetzwerk_Labels): Universal Music Germany 95
+- für das Teilnetzwerk (Teilnetzwerk_Label_Tochter): - (Keine Verbindungen)
+- für das Teilnetzwerk (Teilnetzwerk_Label_Mutter): - (Keine Verbindungen)
+- für das Teilnetzwerk (Teilnetzwerk_Label_Major): - (Keine Verbindungen)
+
+Nach dieser Auswertung ist offensichtlich, dass Universal Music Germany, mit einem Betweenness-Wert von 1032,64, die stärkste und am häufigsten genannte Brücke zwischen den Künstlern und Labels darstellt. Universal Music ist das größte der drei Major-Label neben Sony Music und der Warner Music Group. Sie hat den weltweit größten Anteil am Musikmarkt (Weidenbach, 2020). Am auffälligsten unter den Künstlern ist Capital Bra mit 503,12. Der Rapper ist dafür bekannt, Alben und Singles mit unterschiedlichen Künstlern seiner Szene zu produzieren. Blickt man auf die separierten Netzwerke von Künstlern und Labels überholt Capital Bra (289,47) Universal Music (95) sogar deutlich. 
+
+### Closeness
+Die Funktion "which.max" wertet den höchsten Closeness-Wert des jeweiligen Netzwerks aus.
+```{r Closeness}
+
+# Closeness Wert ausrechnen
+
+closeness(h)
+closeness(Teilnetzwerk_Sony)
+closeness(Teilnetzwerk_Universal)
+closeness(Teilnetzwerk_Warner)
+closeness(Teilnetzwerk_NoMajor)
+closeness(Teilnetzwerk_women)
+closeness(Teilnetzwerk_men)
+closeness(Teilnetzwerk_Kuenstler)
+closeness(Teilnetzwerk_Labels) 
+closeness(Teilnetzwerk_Label_Tochter)
+closeness(Teilnetzwerk_Label_Mutter)
+closeness(Teilnetzwerk_Label_Major)
+
+# Closeness: Gesamtnetzwerk
+Gesamtnetzwerk_close <- closeness (h)
+Gesamtnetzwerk_close
+
+# Knoten mit dem höchsten Closeness-Wert anzeigen
+which.max(Gesamtnetzwerk_close)
+
+# Closeness: Teilnetzwerk-Künstler
+Teilnetzwerk_Kuenstler_close <- closeness (Teilnetzwerk_Kuenstler)
+Teilnetzwerk_Kuenstler_close
+
+# Künstler mit dem höchsten Closeness-Wert anzeigen
+which.max(Teilnetzwerk_Kuenstler_close)
+
+# Closeness: Teilnetzwerk-Labels
+Teilnetzwerk_Labels_close <- closeness (Teilnetzwerk_Labels)
+Teilnetzwerk_Labels_close
+
+# Label mit dem höchsten Closeness-Wert anzeigen
+which.max(Teilnetzwerk_Labels_close)
+
+```
+Auch bei der Closeness stechen wieder Universal Music Germany und Capital Bra heraus. Diese haben innerhalb ihres Typs den höchsten Closeness-Wert. Capital Bra hat mit 0,0065 dabei allerdings einen deutlich höheren Wert als Universal Music Germany mit 0,0020. Im Hinblick auf alle Verbindungen im Gesamtnetzwerk dreht sich dies jedoch: Capital liegt hier mit 0,0027 knapp hinter Universal Music Germany mit 0,0029. 
+
+# Diskussion: Fazit, Limitationen und Ausblick 
+Schlussendlich kommen wir auf unsere drei unterschiedlichen Hypothesen zurück, welche wir anhand der Analyse überprüft haben. Anfangs gingen wir davon aus, dass Künstler:innen, die beim gleichen Label sind, eher miteinander kooperieren als Künstler:innen, die bei verschiedenen Labels unter Vertrag stehen. Betrachtet man das Teilnetzwerk Künstler, welches farblich nach Majorlabels (contract) unterteilt ist, erkennt man schnell, dass hauptsächlich die gleichfarbigen untereinander kooperieren. Das bedeutet, die Künstler:innen mit demselben Majorlabel produzieren häufig gemeinsame Singles oder Alben. Erwähnenswert sind die Künstler:innen mit unterschiedlichen Majorlabels, welche ebenfalls kooperieren und Erfolg feiern. Zusammenfassend bedeutet dies, dass nicht nur Feature innerhalb eines Labels produziert werden, sondern ebenfalls mit anderen großen Labels. 
+Unsere zweite Arbeitsthese besagt, dass die erfolgreichsten Künstler:innen beim gleichen Label unter Vertrag sind und bereits miteinander kooperiert haben. Diese These ist mit den Teilnetzwerken nach Majorlabels widerlegbar. Hier ist ersichtlich, dass die Künstler:innen nicht unter demselben Label unter Vertrag sein müssen, um erfolgreich zu sein. Hervorzuheben sind die Majorlabels Sony Music und Universal Music, welche die erfolgreichsten Künstler:innen unter Vertrag haben. 
+Zu guter Letzt untersuchten wir die Stärke der Vernetzung unserer Künstler:innen. Anhand der unterschiedlichen Beziehungsarten konnten wir untersuchen, welche Künstler:innen Singles oder Alben gemeinsam produzierten. Zu beobachten ist, dass einige der Top Hip Hopper:innen enge Beziehungen durch mehrere Kooperationen zueinander pflegen. Dies zeigt, dass die Künstler:innen ihre Reichweite durch die Fans der anderen ausweiten. Jedoch besonders auffällig sind die beiden Rapper Pashanim und Kayef, welche bislang kein Feature mit anderen Künstlern gemacht hatten und trotz fehlender Vernetzung einen Erfolg in der Charts-Liste erreichten.
+Zu beachten an der Netzwerkanalyse ist die Tatsache, dass wir uns lediglich auf das Jahr 2020 konzentrieren. Aus diesem Grund ist keine Verhältnismäßigkeit zu den vergangenen Jahren darstellbar. Beispielsweise ist keine Interpretation darüber zu treffen, ob Künstler:innen neu in der Branche oder möglicherweise bereits seit einigen Jahren im Business sind. Sie hatte demnach mehr Zeit, mehrere Fans oder Charts-Platzierungen zu ergattern. 
+Ebenfalls zu beachten ist, dass wir uns auf lediglich 35 Künstler:innen beschränkt hatten, die nach unserem Ranking die Top Künstler:innen der Szene abbilden. Um genauere Ergebnisse zu erhalten, wäre es notwendig, diese Limitation aufzuheben und alle Hip Hop-Künstler:innen des Genres zu untersuchen. Demnach sollte der nächste Schritt dieser Forschung sein, dass das Hip Hop Genre mit seinen Künstlern über einen längeren Zeitraum beobachtet wird und die vergangenen Jahre mit in die Bewertung gezogen werden. 
+
+# Anlage
+## Literatur
+## Codebuch
+*Vertex-Attribute*
+*Edge-Attribute*
+## Datenmaterial und Skript
+## Team, Arbeitsaufwand und Lessons Learned
+### Teammitglieder
+### Arbeitsaufwand und Rollen im Team
+
+### Lessons learned 
+Unsere größte Herausforderung betraf den Umgang mit R-Studio und die jeweiligen Funktionen des Programms sinnvoll auf unser Thema anzuwenden. Demnach mussten wir eine Lösung finden, um eine logische Reihenfolge der Netzwerkanalysen zu entwickeln, die uns half, unsere Hypothesen überprüfen zu können. Viele Stunden verbrachten wir damit, Fakten zu recherchieren, da es zuvor keine fertige Tabelle oder Analyse für unser Thema gab. Daraus lernten wir den strukturierten Umgang mit einzelnen Zahlen. Unser Erfolg liegt darin, als Gruppe eine Möglichkeit gefunden zu haben, uns gegenseitig online zu unterstützen und den Forschungsbericht nach unseren Vorstellungen gestalten zu können.
+
+
