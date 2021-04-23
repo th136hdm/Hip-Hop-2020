@@ -1,18 +1,18 @@
 CODEBUCH,,,
 Wert,Defintion,Kommentar,Quelle
 nodelist,,Grundregel: die IDs der Nodelist müssen mit den IDs der Edgelist komplett übereinstimmen. Ausprägungen der Attribute in der Regel numerisch definieren.,
-id,Erste drei Buchstaben des name,"eindeutige Identifikation jedes einzelnen Künstlers/Labels (vertex), der erfasst wird.  ",
+id,Ersten drei Buchstaben des name,"eindeutige Identifikation jedes einzelnen Künstlers/Labels (vertex), der erfasst wird.  ",
 name,Name,Name des Künstlers/Labels,
 sex,"1=male, 2=female ",dichotome Ausprägung,
-type,"1=Künstler, 2=Tochterlabel, 3=Mutterlabel, 4=Majorlabel",Unterscheidung zwischen Akteur/Künstler und unterschiedlichen Labelformen,
-personalrank,Platzierung,"Persönliche Reihenfolge der Hip-Hop-Künstler nach 1. Anzahl der Singles in den Top 100, 2. Höchste Platzierung in den Top 100, 3. Anzahl Auszeichnungen, 4. Anzahl Fans",
-charts,totale Anzahl,Anzahl der Charts in den Top 100 MTV Jahrescharts 2020,http://www.mtv.de/charts/lod2k0/top-100-jahrescharts-2020
-highestrank,Platzierung,der höchste Rang des Künstlers/Label in der Chartliste Top 100 MTV Jahrescharts 2020,http://www.mtv.de/charts/lod2k0/top-100-jahrescharts-2020
-awardgold,totale Anzahl,Anzahl der Gold Auszeichnungen für den Künstler oder das Label im Jahr 2020,https://www.musikindustrie.de/markt-bestseller/gold-/platin-und-diamond-auszeichnung/datenbank////#topSearch
-awardplatin,totale Anzahl,Anzahl der Platin Auszeichnungen für den Künstler oder das Label im Jahr 2020,https://www.musikindustrie.de/markt-bestseller/gold-/platin-und-diamond-auszeichnung/datenbank////#topSearch
-awarddiamond,totale Anzahl,Anzahl der Diamond Auszeichnungen für den Künstler oder das Label im Jahr 2020,https://www.musikindustrie.de/markt-bestseller/gold-/platin-und-diamond-auszeichnung/datenbank////#topSearch
-fans,"1=0 bis 100.000, 2=100.001 bis 500.000, 3=500.001 bis 1.000.000, 4= 1.000.001 bis 2.000.000, 5= alles höher als 2.000.000",definiert die Anzahl der Follower des Künstlers/Labels auf Instagram (gemessen im Februar 2021),https://www.instagram.com/
-contract,"1=Sony, 2=Warner, 3=Universal, 4=keine Zuordnung zu Majorlabel",definiert bei welchem Majorlabel ein Künstler direkt oder indirekt unter Vertrag steht,
+type,"1=Künstler, 2=Tochterlabel, 3=Mutterlabel, 4=Majorlabel",Unterscheidung zwischen Akteuren/Künstlern und Organistaionen/unterschiedlichen Labelformen,
+personalrank,Platzierung,"Persönliche Reihenfolge der Hip-Hop-Künstler nach 1. Anzahl der Singles in den Top 100 (Charts), 2. Höchste Platzierung in den Top 100 (Highest rank), 3. Anzahl Auszeichnungen (awards), 4. Anzahl Instagram-Follower (fans)",
+charts,totale Anzahl,Anzahl der Singles in den MTV Top 100 Jahrescharts 2020,http://www.mtv.de/charts/lod2k0/top-100-jahrescharts-2020
+highestrank,Platzierung,Höchste Platzierung des Künstlers/Labels in den MTV Top 100 Jahrescharts 2020,http://www.mtv.de/charts/lod2k0/top-100-jahrescharts-2020
+awardgold,totale Anzahl,Anzahl der Gold-Auszeichnungen für den Künstler/das Label im Jahr 2020,https://www.musikindustrie.de/markt-bestseller/gold-/platin-und-diamond-auszeichnung/datenbank////#topSearch
+awardplatin,totale Anzahl,Anzahl der Platin-Auszeichnungen für den Künstler/das Label im Jahr 2020,https://www.musikindustrie.de/markt-bestseller/gold-/platin-und-diamond-auszeichnung/datenbank////#topSearch
+awarddiamond,totale Anzahl,Anzahl der Diamant-Auszeichnungen für den Künstler/das Label im Jahr 2020,https://www.musikindustrie.de/markt-bestseller/gold-/platin-und-diamond-auszeichnung/datenbank////#topSearch
+fans,"n/a= kein Instagram-Account, 1= 0 bis 100.000, 2= 100.001 bis 500.000, 3 =500.001 bis 1.000.000, 4 = 1.000.001 bis 2.000.000, 5 = alles höher als 2.000.000",definiert die Anzahl der Follower des Künstlers/Labels auf Instagram (gemessen im Februar 2021),https://www.instagram.com/
+contract,"1=Sony, 2=Warner, 3=Universal, 4=keine Zuordnung zu Majorlabel","definiert das Majorlabel, welchem der Künstler/das Label direkt oder indirekt zuzuordnen ist",
 edgelist,,Grundregel: Die Edgelist darf pro Spalte immer nur einen Wert enthalten. Bis auf die ID idealerweise numerisch codiert (als Zahl).,
 from,ID des Senders,definiert den Sender in ungerichteten Netzwerken. Entspricht ID in der Nodelist. Keine Sonderzeichen.,
 to ,ID des Empfängers,definiert den Empfänger in ungerichteten Netzwerken. Entspricht ID in der Nodelist. Keine Sonderzeichen.,
@@ -23,10 +23,10 @@ weight,"1=einfach, 2=mittel, 3=stark",definiert die Qualität der Beziehung,
 ,,,
 Unsere Ausgangsposition:,,,
 "Wir analysieren die Kooperationen der deutschsprachigen Hip-Hop-Künstler und deren Labels, welche in den MTV Top 100 Jahrescharts 2020 vertreten sind. ",,,
-"Unsere Künstlerauswahl bezieht sich auf keine feste Hip-Hop-Chartliste, sondern beruft sich auf ein individuelles Sample. ",,,
+"Unsere Künstlerauswahl bezieht sich auf keine feste Hip-Hop-Chartliste, sondern beruft sich auf ein individuelles Sample aus den MTV Top 100 Jahrescharts. ",,,
 Die unterschiedlichen Beziehungen zwischen den Künstlern sind gemeinsame Singles oder Alben.,,,
 "Wir arbeiten darüber hinaus die Beziehungen der Künstler und Labels, bei denen sie unter Vertrag stehen, heraus.",,,
 "Zudem stellen wir die Labelstruktur der deutschen Hip-Hop-Landschaft dar, indem wir diese in eineinander zugehörige Tochter-, Mutter- und Majorlabel unterteilen.",,,
 ,,,
-"Die Daten werden aus unterschiedlichen Datenbanken erhoben, wie MTV Top 100 Jahrescharts 2020, Spotify, Instagram, Websiten der Labels, Wikipedia, etc.",,,
-"Als Verbindungen zwischen den Künstlern haben wir die Songs aus den MTV Top 100 Jahrescharts 2020, auf die sich unser Sample beruft, sowie alle Songs und Alben, bei denen unsere gesampelten Künstler im Jahr 2020 kooperiert haben, erstellt. ",,,
+"Die Daten werden aus unterschiedlichen Quellen erhoben, wie MTV Top 100 Jahrescharts 2020, Spotify, Instagram, Websiten der Labels, Wikipedia, etc.",,,
+"Die Verbindungen zwischen den Künstlern stellen alle Songs aus den MTV Top 100 Jahrescharts 2020, auf die sich unser Sample beruft, sowie alle Songs und Alben aus dem Jahr 2020, bei denen die gesampelten Künstler untereinander kooperiert haben, dar.",,,
