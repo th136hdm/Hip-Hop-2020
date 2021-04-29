@@ -16,7 +16,7 @@ contract,"1=Sony, 2=Warner, 3=Universal, 4=keine Zuordnung zu Majorlabel","defin
 edgelist,,Grundregel: Die Edgelist darf pro Spalte immer nur einen Wert enthalten. Bis auf die ID idealerweise numerisch codiert (als Zahl).,
 from,ID des Senders,definiert den Sender in ungerichteten Netzwerken. Entspricht ID in der Nodelist. Keine Sonderzeichen.,
 to ,ID des Empfängers,definiert den Empfänger in ungerichteten Netzwerken. Entspricht ID in der Nodelist. Keine Sonderzeichen.,
-relationship,"1=gemeinsame Single von Künstler:innen, 2=gemeinsames Album von Künstler:innen, 3=Künstler:in & Tochter-Label, 4=Künstler:in & Mutter-Label, 5=Künstler:in & Major-Label, 6=Tochterl-Label & Mutter-Label, 7=Tochter-Label & Major-Label, 8=Mutter-Label & Major-Label ",definiert die Art der Beziehung bei multiplexen Netzwerken mit verschiedenen Beziehungsarten ,
+relationship,"1=gemeinsame Single von Künstler:innen, 2=gemeinsames Album von Künstler:innen, 3=Künstler:in & Tochter-Label, 4=Künstler:in & Mutter-Label, 5=Künstler:in & Major-Label, 6=Tochter-Label & Mutter-Label, 7=Tochter-Label & Major-Label, 8=Mutter-Label & Major-Label ",definiert die Art der Beziehung bei multiplexen Netzwerken mit verschiedenen Beziehungsarten ,
 weight,"1=einfach, 2=mittel, 3=stark",definiert die Qualität der Beziehung,
 ,,,
  n/a,Variable: definiert fehlende Werte,,
