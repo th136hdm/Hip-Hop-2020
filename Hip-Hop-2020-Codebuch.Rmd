@@ -1,0 +1,59 @@
+---
+title: "Hip-Hop-2020-Codebuch"
+author: "eh044, ih041, mr195, th136, dr083"
+date: "Sommersemester 2021, Abgabe 04. Mai 2021"
+---
+
+```{r Gesamtnetzwerk erstellen, fig.high=9, fig.width=16, message=FALSE, warning=FALSE, include=FALSE, paged.print=TRUE}
+library(tidyverse)
+library(igraph)
+
+# Einlesen der Edge- und Nodelist
+
+el <- read.csv("https://raw.githubusercontent.com/timonhe99/Hip-Hop-2020/main/Hip-Hop-2020-Edgelist.csv", header=T, as.is=T, sep = ",")
+nodes <- read.csv("https://raw.githubusercontent.com/timonhe99/Hip-Hop-2020/main/Hip-Hop-2020-Nodelist.csv", header=T, as.is=T, sep = ",")
+
+# Matrix erstellen
+edgematrix <-as.matrix(el)
+
+# Zusammenführen von Edge- und Nodelist als igraph-Objekt
+
+h <- graph_from_data_frame(d=edgematrix, vertices=nodes, directed=F)
+
+# Visualisierung des Gesamtnetzwerks
+plot(h)
+
+```
+
+## Codebuch
+[Codebuch](https://github.com/hdm-crpr/226305/blob/master/data/crpr2/codebuch.md)
+```{r Übersicht Netzwerkattribute}
+list.vertex.attributes(h)
+# vertex.attributes(h)
+list.edge.attributes(h)
+# edge.attributes(h)
+```
+
+Das Netzwerk hat nach dem [Codebuch](https://github.com/timonhe99/Hip-Hop-2020/blob/main/Hip-Hop-2020-Codebuch.csv) folgende Attribute:
+
+__Vertex-Attribute__
+
+* id: Ersten drei Buchstaben des Namen
+* name: Name des Knotens (Künstler:in oder Label)
+* sex: 1= männlich, 2= weiblich
+* type: Unterschiedung zwischen 1= Künstler:in, 2= Tochter-Label, 3= Mutter-Label, 4= Major-Label
+* personalrank: Persönlicher Rang der Hip-Hop-Künstler:in nach 1. Anzahl der Singles in den Top 100 (Charts), 2. Höchste Platzierung in den Top 100 (Highest rank), 3. Anzahl Auszeichnungen (awards), 4. Anzahl Instagram-Follower (fans)
+* charts: Anzahl der Singles in den MTV Top 100 Jahrescharts 2020
+* highestrank: Höchste Platzierung des:der Künstlers:in/Labels in den MTV Top 100 Jahrescharts 2020
+* awardgold: Anzahl der Gold-Auszeichnungen für den:die Künstler:in/das Label im Jahr 2020
+* awardplatin: Anzahl der Platin-Auszeichnungen für den:die Künstler:in/das Label im Jahr 2020
+* awarddiamond: Anzahl der Diamond-Auszeichnungen für den:die Künstler:in/das Label im Jahr 2020
+* fans: Definiert die Anzahl der Follower des:der Künstlers:in/Labels auf Instagram (gemessen im Februar 2021).
+n/a= kein Instagram-Account, 1= 0 bis 100.000, 2= 100.001 bis 500.000, 3= 500.001 bis 1.000.000, 4= 1.000.001 bis 2.000.000, 5= alles höher als 2.000.000
+* contract: Definiert das Major-Label, welchem der:die Künstler:in/das Label direkt oder indirekt zuzuordnen ist.
+1= Sony, 2= Warner, 3= Universal, 4= keine Zuordnung zu Major-Label
+
+__Edge-Attribute__
+
+* relationship: 1= gemeinsame Single von Künstler:innen, 2= gemeinsames Album von Künstler:innen, 3= Künstler:in & Tochter-Label, 4= Künstler:in & Mutter-Label, 5= Künstler:in & Major-Label, 6= Tochter-Label & Mutter-Label, 7= Tochter-Label & Major-Label, 8= Mutter-Label & Major-Label 
+* weight: 1= einfach, 2= mittel, 3= stark ausgeprägte Beziehung
